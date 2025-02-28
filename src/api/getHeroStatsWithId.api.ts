@@ -1,12 +1,14 @@
-/*import axios from "axios";
+import axios from "axios";
+import { I_HeroStats } from "../types";
 
 export const getHeroStatsWithIdAPI = async (id : number) => {
   try {
     const res = await axios.get("https://api.opendota.com/api/heroStats");
-    res.data = res.data.filter(item.res.)
-    return res.data;
+    res.data = res.data.filter((item : I_HeroStats) => item.id == id)
+    if (!res.data[0]) return Error
+    return res.data[0];
   } catch(error) {
     console.error(error);
     return [];
   }
-};*/
+};

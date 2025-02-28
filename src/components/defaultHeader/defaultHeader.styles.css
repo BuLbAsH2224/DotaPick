@@ -1,0 +1,19 @@
+.defaultHeaderMain {
+    height: 4rem;
+    background-color: #2c2c2c; 
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .homeIcon {
+    object-fit: contain;
+    width: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .homeIcon:hover {
+    transform: scale(1.1);
+  }
+  

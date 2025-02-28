@@ -1,0 +1,13 @@
+.defaultFooterMain {
+    height: 3rem;
+    background-color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .defaultFooterMain p {
+    margin: 0;
+  }

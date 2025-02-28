@@ -4,6 +4,7 @@ import { I_HeroStats } from "../../types";
 import {
   HeroPreviewComponent,
 } from "../../components";
+import "./mainPage.styles.css"
 
 const MainPage = () => {
   const [heroStats, setHeroStats] = useState<I_HeroStats[]>([]);

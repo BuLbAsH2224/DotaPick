@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { DefaultHeader, DefaultFooter } from "./components";
-import { MainPage } from "./pages";
+import { MainPage, SingleHeroPage } from "./pages";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <div className="mainContent">
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/singleHero/:id" element={<SingleHeroPage />} />
         </Routes>
       </div>
       <DefaultFooter />

@@ -1,17 +1,23 @@
-import React from 'react'
-import { I_HeroStats } from '../../types'
-import { steamLink } from '../../api'
-import "./heroPreview.styles.css"
+import React from "react";
+import { I_HeroPreview } from "../../types";
+import "./HeroPreview.styles.css";
+import { Link } from "react-router-dom";
+import { getHeroAttributeImage, getHeroImageUrlFromName } from "../../utils";
 
-interface IheroPreviewProps{
-    hero: I_HeroStats
+interface IheroPreviewProps {
+  hero: I_HeroPreview;
 }
 
-export const HeroPreviewComponent : React.FC<IheroPreviewProps> = ({hero})=>{
+export const HeroPreviewComponent: React.FC<IheroPreviewProps> = ({ hero }) => {
   return (
-    <div className='heroPreviewDiv'>
-    <img src={`${steamLink}${hero.img}`} className='heroPreviewImg'/>
-    <p className='heroPreviewName'>{hero.localized_name}</p>
-    </div>
-  )
-}
+    <Link to={`/singleHero/${hero.id}` }>
+      <div className="heroPreviewDiv" >
+        <img
+          src={getHeroImageUrlFromName(hero.name)}
+          className="heroPreviewImg"
+        />
+        <p className="heroPreviewName"> <img src={getHeroAttributeImage(hero.primary_attr)} alt={hero.primary_attr} className="heroPreviewAttributeImage" />{hero.localized_name}</p>
+      </div>
+    </Link>
+  );
+};

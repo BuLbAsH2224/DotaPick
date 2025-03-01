@@ -1,1 +1,1 @@
-export * from "./heroPreview.component"
+export * from "./HeroPreview.component"

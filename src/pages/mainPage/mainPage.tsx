@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 import { getHeroesStatsAPI } from "../../api";
-import { I_HeroStats } from "../../types";
+import { I_HeroPreview } from "../../types";
 import {
   HeroPreviewComponent,
 } from "../../components";
 import "./mainPage.styles.css"
 
 const MainPage = () => {
-  const [heroStats, setHeroStats] = useState<I_HeroStats[]>([]);
+  const [heroesStats, setHeroesStats] = useState<I_HeroPreview[]>([]);
   useEffect(() => {
     const getData = async () => {
       const data = await getHeroesStatsAPI();
-      setHeroStats(data);
+      setHeroesStats(data);
     };
     getData();
   }, []);
   return (
     <>
         <div className="heroPreviewsDiv">
-          {heroStats.map((item) => {
+          {heroesStats.map((item) => {
             return <HeroPreviewComponent hero={item} />;
           })}
         </div>

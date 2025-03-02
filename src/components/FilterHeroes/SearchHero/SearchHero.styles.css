@@ -1,0 +1,11 @@
+.SearchHeroDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+.SearchHeroIconImage{
+    object-fit: contain;
+    width: 1.3rem;
+}

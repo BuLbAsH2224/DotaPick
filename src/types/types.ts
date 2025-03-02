@@ -1,3 +1,4 @@
+export type filterButtonType = string | null;
 export interface I_HeroPreview {
   id: number;
   name: string;

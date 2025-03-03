@@ -1,2 +1,2 @@
-export * from "./getHeroesPreview.api"
-export * from "./getHeroStatsWithId.api"
+export * from "./get-heroes-preview.api"
+export * from "./get-hero-stats-with-id.api"

@@ -1,19 +1,19 @@
 import { useEffect, useState } from "react";
 import { getHeroesStatsAPI } from "../../api";
-import { I_HeroPreview } from "../../types";
-import { FilterHeroes, HeroPreviewComponent } from "../../components";
-import "./mainPage.styles.css";
+import { IHeroPreview } from "../../types";
+import { FilterHeroesComponent, HeroPreviewComponent } from "../../components";
+import "./main-page.styles.css";
 
-const MainPage = () => {
-  const [heroesStats, setHeroesStats] = useState<I_HeroPreview[]>([]);
+const MainPage : React.FC = () => {
+  const [heroesStats, setHeroesStats] = useState<IHeroPreview[]>([]);
   const [filteredHeroesStats, setFilteredHeroesStats] = useState<
-    I_HeroPreview[]
+    IHeroPreview[]
   >([]);
   useEffect(() => {
     const getData = async () => {
       const data = await getHeroesStatsAPI();
       setHeroesStats(
-        data.sort((a: I_HeroPreview, b: I_HeroPreview) =>
+        data.sort((a: IHeroPreview, b: IHeroPreview) =>
           a.localized_name > b.localized_name ? 1 : -1
         )
       );
@@ -31,7 +31,7 @@ const MainPage = () => {
           вас к победе.
         </p>
       </div>
-      <FilterHeroes heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
+      <FilterHeroesComponent heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
       <div className="heroPreviewsDiv">
         {
           filteredHeroesStats.length ?  filteredHeroesStats.map((item) => {

@@ -1,4 +1,4 @@
-import "./defaultFooter.styles.css";
+import "./default-footer.styles.css";
 import React from "react";
 
 export const DefaultFooter : React.FC = () => {

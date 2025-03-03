@@ -1,10 +1,10 @@
-import { I_HeroStats } from "../../types";
+import { IHeroStats } from "../../types";
 
-import "./HeroFull.styles.css";
+import "./hero-full.styles.css";
 import { getHeroImageUrlFromName, getHeroVideoUrlFromName } from "../../utils";
 
 interface IheroFullProps {
-  hero: I_HeroStats;
+  hero: IHeroStats;
 }
 
 export const HeroFullComponent: React.FC<IheroFullProps> = ({ hero }) => {

@@ -1,13 +1,13 @@
-import "./singleHeroPage.styles.css";
+import "./single-hero-page.styles.css";
 import { useParams } from "react-router-dom";
-import { I_HeroStats } from "../../types";
+import { IHeroStats } from "../../types";
 import { getHeroStatsWithIdAPI } from "../../api";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HeroFullComponent } from "../../components";
 
-const SingleHeroPage = () => {
+const SingleHeroPage : React.FC = () => {
   const { id } = useParams();
-  const [heroStats, setHeroStats] = useState<I_HeroStats | null>(null);
+  const [heroStats, setHeroStats] = useState<IHeroStats | null>(null);
   useEffect(() => {
     const getData = async () => {
       if (!id) return;

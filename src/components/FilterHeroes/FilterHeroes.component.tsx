@@ -49,7 +49,8 @@ export const FilterHeroes: React.FC<I_FilterHeroesProps> = ({
     StateFunc(filteredArray);
   }, [StateFunc, filteredArray]);
   return (
-    <div>
+    <div className="FiltersAndFoundDiv">
+      <div>
       {Attributes.map((item) => {
         return (
           <RadioAttrButton
@@ -60,6 +61,7 @@ export const FilterHeroes: React.FC<I_FilterHeroesProps> = ({
           />
         );
       })}
+      </div>
       <SearchHero SearchValue={SearchValue} handle={handleOnInput} />
     </div>
   );

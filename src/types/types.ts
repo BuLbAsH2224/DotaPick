@@ -1,5 +1,5 @@
 export type filterButtonType = string | null;
-export interface I_HeroPreview {
+export interface IHeroPreview {
   id: number;
   name: string;
   localized_name: string;
@@ -8,7 +8,7 @@ export interface I_HeroPreview {
   roles: string[];
 }
 
-export interface I_HeroStats {
+export interface IHeroStats {
   id: number;
   name: string;
   localized_name: string;

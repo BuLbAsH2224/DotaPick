@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { I_HeroPreview, filterButtonType } from "../../types";
-import { RadioAttrButton } from "./RadioAttrButtons";
-import { SearchHero } from "./SearchHero";
-import "./FilterHeroes.styles.css";
+import { IHeroPreview, filterButtonType } from "../../types";
+import { AttributeChooseButtonComponent } from "./attribute-choose-buttons";
+import { SearchHeroComponent } from "./search-hero";
+import "./filter-heroes.styles.css";
 
-interface I_FilterHeroesProps {
-  StateFunc: React.Dispatch<React.SetStateAction<I_HeroPreview[]>>;
-  heroes: I_HeroPreview[];
+interface IFilterHeroesProps {
+  StateFunc: React.Dispatch<React.SetStateAction<IHeroPreview[]>>;
+  heroes: IHeroPreview[];
 }
 
 const Attributes: string[] = ["str", "agi", "int", "all"];
 
-export const FilterHeroes: React.FC<I_FilterHeroesProps> = ({
+export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
   heroes,
   StateFunc,
 }) => {
   const [Attr, setAttr] = useState<filterButtonType>(null);
   const [SearchValue, setSearchValue] = useState<string>("");
-  const [filteredArray, setFilteredArray] = useState<I_HeroPreview[]>(heroes);
+  const [filteredArray, setFilteredArray] = useState<IHeroPreview[]>(heroes);
 
   const handleRadioClick = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.id === Attr) setAttr(null);
@@ -53,7 +53,7 @@ export const FilterHeroes: React.FC<I_FilterHeroesProps> = ({
       <div>
       {Attributes.map((item) => {
         return (
-          <RadioAttrButton
+          <AttributeChooseButtonComponent
             key={item}
             AttrButton={item}
             Attr={Attr}
@@ -62,7 +62,7 @@ export const FilterHeroes: React.FC<I_FilterHeroesProps> = ({
         );
       })}
       </div>
-      <SearchHero SearchValue={SearchValue} handle={handleOnInput} />
+      <SearchHeroComponent SearchValue={SearchValue} handle={handleOnInput} />
     </div>
   );
 };

@@ -1,12 +1,12 @@
-import "./SearchHero.styles.css"
+import "./search-hero.styles.css"
 import React from "react";
 import SearchIcon from "../../../assets/search.icon.png"
-interface I_SearchHeroProps {
+interface ISearchHeroProps {
   handle :React.FormEventHandler<HTMLInputElement>
   SearchValue: string
 }
 
-export const SearchHero: React.FC<I_SearchHeroProps> = ({handle,SearchValue}) => {
+export const SearchHeroComponent: React.FC<ISearchHeroProps> = ({handle,SearchValue}) => {
   return (
     <div className="SearchHeroDiv">
         <img src={SearchIcon} alt="search icon" className="SearchHeroIconImage" />

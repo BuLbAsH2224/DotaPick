@@ -1,15 +1,15 @@
 import React from "react";
-import "./RadioAttrButtons.styles.css";
+import "./attribute-choose-buttons.styles.css";
 import { filterButtonType } from "../../../types";
 import { getHeroAttributeImage } from "../../../utils";
 
-interface I_RadioAttrButtonProps {
+interface IAttributeChooseButtons {
   Attr : filterButtonType,
   AttrButton : string,
   handle : React.ChangeEventHandler<HTMLInputElement>;
 }
 
-export const RadioAttrButton: React.FC<I_RadioAttrButtonProps> = ({Attr,AttrButton,handle}) => {
+export const AttributeChooseButtonComponent: React.FC<IAttributeChooseButtons> = ({Attr,AttrButton,handle}) => {
   return (
     <label htmlFor={AttrButton}>
     <input

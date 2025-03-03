@@ -1,14 +1,14 @@
 import React from "react";
-import { I_HeroPreview } from "../../types";
-import "./HeroPreview.styles.css";
+import { IHeroPreview } from "../../types";
+import "./hero-preview.styles.css";
 import { Link } from "react-router-dom";
 import { getHeroAttributeImage, getHeroImageUrlFromName } from "../../utils";
 
-interface IheroPreviewProps {
-  hero: I_HeroPreview;
+interface IHeroPreviewProps {
+  hero: IHeroPreview;
 }
 
-export const HeroPreviewComponent: React.FC<IheroPreviewProps> = ({ hero }) => {
+export const HeroPreviewComponent: React.FC<IHeroPreviewProps> = ({ hero }) => {
   return (
     <Link to={`/singleHero/${hero.id}` }>
       <div className="heroPreviewDiv" >

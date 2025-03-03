@@ -1,4 +1,4 @@
-import "./defaultHeader.styles.css"
+import "./default-header.styles.css"
 import { Link } from "react-router-dom"
 import homeIcon from "../../assets/home.icon.png"
 import React from "react"

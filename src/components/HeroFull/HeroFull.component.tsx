@@ -1,4 +1,3 @@
-import React from "react";
 import { I_HeroStats } from "../../types";
 
 import "./HeroFull.styles.css";
@@ -9,7 +8,6 @@ interface IheroFullProps {
 }
 
 export const HeroFullComponent: React.FC<IheroFullProps> = ({ hero }) => {
-  
   return (
     <div className="heroFullDiv">
       <video autoPlay loop muted playsInline className="heroFullVideo">

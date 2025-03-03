@@ -10,7 +10,7 @@ export const SearchHero: React.FC<I_SearchHeroProps> = ({handle,SearchValue}) =>
   return (
     <div className="SearchHeroDiv">
         <img src={SearchIcon} alt="search icon" className="SearchHeroIconImage" />
-        <input type="text" value={SearchValue} onInput={handle} />
+        <input type="text" className="SearchHeroInput" value={SearchValue} onInput={handle} />
     </div>
   );
 };

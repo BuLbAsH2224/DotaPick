@@ -3,20 +3,30 @@
   margin: 0;
   padding: 0;
 }
-html,
+
+html {
+  height: auto; 
+}
+
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100vh; 
+  background: url("/src/assets/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 105vh; 
 }
 
 .mainContent {
+  min-height: 100vh;
   flex: 1;
   padding: 1rem;
 }

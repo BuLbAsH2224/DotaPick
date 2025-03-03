@@ -1,7 +1,8 @@
 import "./defaultHeader.styles.css"
 import { Link } from "react-router-dom"
 import homeIcon from "../../assets/home.icon.png"
-export const DefaultHeader = () => {
+import React from "react"
+export const DefaultHeader : React.FC = () => {
   return (
     <header className="defaultHeaderMain">
         <Link to="/"><img src={homeIcon} className="homeIcon" /></Link>

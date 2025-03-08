@@ -1,1 +1,1 @@
-export * from "./singleHeroPage"
+export * from "./single-hero-page"

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { DefaultHeader, DefaultFooter } from "./components";
-import { MainPage, SingleHeroPage } from "./pages";
+import { MainPage, NotFoundPage, SingleHeroPage } from "./pages";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/singleHero/:id" element={<SingleHeroPage />} />
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </div>
       <DefaultFooter />

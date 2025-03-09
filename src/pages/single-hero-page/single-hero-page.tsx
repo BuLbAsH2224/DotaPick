@@ -1,21 +1,25 @@
 import "./single-hero-page.styles.css";
 import { useParams } from "react-router-dom";
 import { IHeroStats } from "../../types";
-import { getHeroStatsWithIdAPI } from "../../api";
 import React, { useEffect, useState } from "react";
 import { HeroFullComponent } from "../../components";
+import { getOneHeroWithId } from "../../utils";
 
-const SingleHeroPage : React.FC = () => {
-  const { id } = useParams();
+interface ISingleHeroPageProps {
+  heroesStats: IHeroStats[] | undefined;
+}
+
+const SingleHeroPage: React.FC<ISingleHeroPageProps> = ({ heroesStats }) => {
+  const { id } = useParams<{ id: string }>();
   const [heroStats, setHeroStats] = useState<IHeroStats | null>(null);
+
   useEffect(() => {
-    const getData = async () => {
-      if (!id) return;
-      const data = await getHeroStatsWithIdAPI(id);
-      setHeroStats(data);
-    };
-    getData();
-  }, []);
+    if (id && heroesStats) {
+      const hero = getOneHeroWithId(heroesStats, parseInt(id));
+      setHeroStats(hero);
+    }
+  }, [id, heroesStats]);
+
   return (
     <>{heroStats ? <HeroFullComponent hero={heroStats} /> : <p>notFound</p>}</>
   );

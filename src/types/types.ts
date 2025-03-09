@@ -1,12 +1,4 @@
 export type filterButtonType = string | null;
-export interface IHeroPreview {
-  id: number;
-  name: string;
-  localized_name: string;
-  primary_attr: string;
-  attack_type: string;
-  roles: string[];
-}
 
 export interface IHeroStats {
   id: number;

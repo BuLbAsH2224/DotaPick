@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import { getHeroesStatsAPI } from "../../api";
-import { IHeroPreview } from "../../types";
+import { IHeroStats } from "../../types";
 import { FilterHeroesComponent, HeroPreviewComponent } from "../../components";
 import "./main-page.styles.css";
 
-const MainPage : React.FC = () => {
+interface IMainPageProps{
+  heroesStats: IHeroStats[] | undefined;
+}
+
+const MainPage : React.FC<IMainPageProps> = () => {
   const [heroesStats, setHeroesStats] = useState<IHeroPreview[]>([]);
   const [filteredHeroesStats, setFilteredHeroesStats] = useState<
     IHeroPreview[]

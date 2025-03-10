@@ -1,7 +1,7 @@
 import { IHeroStats } from "../../types";
-
-import "./hero-full.styles.css";
-import { getHeroImageUrlFromName, getHeroVideoUrlFromName } from "../../utils";
+import { getHeroImageUrlFromName } from "../../utils";
+import { BaseInfoComponent } from "./base-info/base-info.component";
+import "./hero-full.styles.css"
 
 interface IheroFullProps {
   hero: IHeroStats;
@@ -9,15 +9,12 @@ interface IheroFullProps {
 
 export const HeroFullComponent: React.FC<IheroFullProps> = ({ hero }) => {
   return (
-    <div className="heroFullDiv">
-      <video autoPlay loop muted playsInline className="heroFullVideo">
-        <source
-          src={getHeroVideoUrlFromName(hero.name)}
-          type="video/webm"
-        />
-      </video>
-      <img src={getHeroImageUrlFromName(hero.name)} className="heroPreviewImg" />
-      <p>{hero.localized_name}</p>
+    <div className="heroFullCompDiv">
+      <BaseInfoComponent hero={hero}/>
+      <img
+        src={getHeroImageUrlFromName(hero.name)}
+        className="heroPreviewImg"
+      />
     </div>
   );
 };

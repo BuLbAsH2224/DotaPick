@@ -1,16 +1,24 @@
 import "./search-hero.styles.css"
 import React from "react";
 import SearchIcon from "../../../assets/search.icon.png"
+import clearSearchInput from "../../../assets/clearSearchButton.svg"
 interface ISearchHeroProps {
-  handle :React.FormEventHandler<HTMLInputElement>
+  SearchSetFunc: React.Dispatch<React.SetStateAction<string>>
   SearchValue: string
 }
 
-export const SearchHeroComponent: React.FC<ISearchHeroProps> = ({handle,SearchValue}) => {
+export const SearchHeroComponent: React.FC<ISearchHeroProps> = ({SearchSetFunc,SearchValue}) => {
+    const handleOnInput = (event: React.FormEvent<HTMLInputElement>) => {
+      SearchSetFunc(event.currentTarget.value);
+    };
+    const handleClickClearInput = () => {
+      SearchSetFunc("");
+    };
   return (
     <div className="SearchHeroDiv">
         <img src={SearchIcon} alt="search icon" className="SearchHeroIconImage" />
-        <input type="text" className="SearchHeroInput" value={SearchValue} onInput={handle} />
+        <input type="text" className="SearchHeroInput" value={SearchValue} onInput={handleOnInput} />
+        <img src={clearSearchInput} alt="clear input" onClick={handleClickClearInput} className={SearchValue ? "clearSearchInputActive" : "clearSearchInputHidden"}/>
     </div>
   );
 };

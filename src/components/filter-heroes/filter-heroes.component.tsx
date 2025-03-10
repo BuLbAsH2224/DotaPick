@@ -24,9 +24,7 @@ export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
     if (event.target.id === Attr) setAttr(null);
     else setAttr(event.target.id);
   };
-  const handleOnInput = (event: React.FormEvent<HTMLInputElement>) => {
-    setSearchValue(event.currentTarget.value);
-  };
+
   useEffect(() => {
     if (!heroes) return
       const filtereds = {heroFiltereds: heroes}
@@ -56,7 +54,7 @@ export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
           );
         })}
       </div>
-      <SearchHeroComponent SearchValue={SearchValue} handle={handleOnInput} />
+      <SearchHeroComponent SearchValue={SearchValue} SearchSetFunc={setSearchValue} />
     </div>
   );
 };

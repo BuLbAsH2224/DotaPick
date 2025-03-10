@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { getHeroesStatsAPI } from "../../api";
+import { useState } from "react";
 import { IHeroStats } from "../../types";
 import { FilterHeroesComponent, HeroPreviewComponent } from "../../components";
 import "./main-page.styles.css";
@@ -8,22 +7,8 @@ interface IMainPageProps{
   heroesStats: IHeroStats[] | undefined;
 }
 
-const MainPage : React.FC<IMainPageProps> = () => {
-  const [heroesStats, setHeroesStats] = useState<IHeroPreview[]>([]);
-  const [filteredHeroesStats, setFilteredHeroesStats] = useState<
-    IHeroPreview[]
-  >([]);
-  useEffect(() => {
-    const getData = async () => {
-      const data = await getHeroesStatsAPI();
-      setHeroesStats(
-        data.sort((a: IHeroPreview, b: IHeroPreview) =>
-          a.localized_name > b.localized_name ? 1 : -1
-        )
-      );
-    };
-    getData();
-  }, []);
+const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
+  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>([]);
   return (
     <>
       <div className="mainPageAboutTextDiv">

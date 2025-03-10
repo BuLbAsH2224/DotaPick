@@ -17,7 +17,7 @@ function App() {
       <DefaultHeader />
       <div className="mainContent">
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage heroesStats={data} />} />
           <Route path="/singleHero/:id" element={<SingleHeroPage heroesStats={data}/>} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

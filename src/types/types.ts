@@ -1,5 +1,33 @@
 export type filterButtonType = string | null;
 
+export interface IItems {
+  abilities: 
+    {
+      type: string;
+      string: string;
+      description: string;
+    }[],
+  hint: string[];
+  id: number;
+  img: string;
+  dname: string;
+  qual: string;
+  cost: number;
+  behavior: string;
+  notes: string;
+  attrib:  {
+    key:  string;
+    display?: string,
+    value: string;
+  }[];
+  mc: boolean;
+  hc: boolean;
+  cd: number;
+  lore: string;
+  components: string[] | null;
+  created: boolean;
+  charges: boolean;
+}
 export interface IHeroStats {
   id: number;
   name: string;

@@ -30,6 +30,7 @@
 .heroFullVideo {
   object-fit: contain;
   width: 32rem;
+  height: 30rem;
 }
 .heroAttrFromNameAndVideo {
   object-fit: contain;

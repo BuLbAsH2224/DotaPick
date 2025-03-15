@@ -5,12 +5,12 @@ import {
   IItem,
   IItems,
 } from "../../types";
-import { getHeroImageUrlFromName } from "../../utils";
 import { BaseInfoComponent } from "./base-info/base-info.component";
 import { useEffect, useState } from "react";
 import "./hero-full.styles.css";
 import { useQuery } from "@tanstack/react-query";
 import { getHeroPopularItems } from "../../api";
+import { PopularItemsComponent } from "./popular-items";
 
 interface IHeroFullProps {
   hero: IHeroStats;
@@ -25,7 +25,9 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
     window.scrollTo({ top: 0 });
   }, []);
 
-  const [popularItems, setPopularItems] = useState<IHeroPopularItems>([]);
+  const [popularItems, setPopularItems] = useState<IHeroPopularItems | null>(
+    null
+  );
 
   const { data: heroPopularItemsData } = useQuery<IHeroPopularItemsID>({
     queryKey: ["heroPopularItems", hero.id],
@@ -34,12 +36,11 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
 
   useEffect(() => {
     if (!heroPopularItemsData || !items) return;
-
-    const allItems = Object.values(items);
-
+    const allItemsID = Object.values(items);
+    
     const getItemsFromIds = (itemsData: { [key: string]: number }) => {
       return Object.keys(itemsData)
-        .map((itemId) => allItems.find((item) => item.id === Number(itemId)))
+        .map((itemId) => allItemsID.find((item) => item.id === Number(itemId)))
         .filter((item): item is IItem => item !== undefined);
     };
 
@@ -54,10 +55,11 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
   return (
     <div className="heroFullCompDiv">
       <BaseInfoComponent hero={hero} />
-      <img
-        src={getHeroImageUrlFromName(hero.name)}
-        className="heroPreviewImg"
-      />
+      {popularItems ? (
+        <PopularItemsComponent popularItems={popularItems} />
+      ) : (
+        <p className="loadingText">Loading..</p>
+      )}
     </div>
   );
 };

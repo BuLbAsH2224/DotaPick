@@ -1,12 +1,11 @@
 export type filterButtonType = string | null;
 
-export interface IItems {
-  abilities: 
-    {
-      type: string;
-      string: string;
-      description: string;
-    }[],
+export interface IItem {
+  abilities: {
+    type: string;
+    string: string;
+    description: string;
+  }[];
   hint: string[];
   id: number;
   img: string;
@@ -15,9 +14,9 @@ export interface IItems {
   cost: number;
   behavior: string;
   notes: string;
-  attrib:  {
-    key:  string;
-    display?: string,
+  attrib: {
+    key: string;
+    display?: string;
     value: string;
   }[];
   mc: boolean;
@@ -27,6 +26,10 @@ export interface IItems {
   components: string[] | null;
   created: boolean;
   charges: boolean;
+}
+
+export interface IItems {
+  [itemName: string]: IItem;
 }
 export interface IHeroStats {
   id: number;
@@ -84,4 +87,17 @@ export interface IHeroStats {
   "7_win": number;
   "8_pick": number;
   "8_win": number;
+}
+
+export interface IHeroPopularItemsID {
+  start_game_items: { [key: string]: number };
+  early_game_items: { [key: string]: number };
+  mid_game_items: { [key: string]: number };
+  late_game_items: { [key: string]: number };
+}
+export interface IHeroPopularItems {
+  start_game_items: IItem[]
+  early_game_items: IItem[]
+  mid_game_items: IItem[]
+  late_game_items: IItem[]
 }

@@ -8,7 +8,7 @@ interface IMainPageProps{
 }
 
 const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
-  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>([]);
+  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>(heroesStats ? heroesStats : []);
   return (
     <>
       <div className="mainPageAboutTextDiv">
@@ -23,8 +23,9 @@ const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
       <FilterHeroesComponent heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
       <div className="heroPreviewsDiv">
         {
+          !heroesStats ?  <h1>Loading</h1> :
           filteredHeroesStats.length ?  filteredHeroesStats.map((item) => {
-            return <HeroPreviewComponent hero={item} />;
+            return <HeroPreviewComponent hero={item}  key={item.id}/>;
           }) : <p className="HeroesNotFound">Герои не найдены!</p>
           
         }

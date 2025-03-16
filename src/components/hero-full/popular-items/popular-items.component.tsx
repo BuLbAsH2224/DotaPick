@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { IHeroPopularItems, IItem } from "../../../types";
 import "./popular-items.styles.css";
 import { ItemPreviewComponent } from "../../item-preview";
@@ -15,17 +15,20 @@ export const PopularItemsComponent: React.FC<PopularItemsProps> = ({
     x: number;
     y: number;
   }>({ x: 0, y: 0 });
+  const itemPreviewRef = useRef<HTMLDivElement | null>(null)
   const handleMouseEnter =
-    (item: IItem) => (e: React.MouseEvent<HTMLImageElement>) => {
+    (item: IItem) => (e: React.MouseEvent<HTMLImageElement >) => {
+      if (!itemPreviewRef) return
       setActiveItem(item);
       const element = e.target as HTMLImageElement;
+     
       const rect = element.getBoundingClientRect();
-      const newPos = {x:0, y:0}
-      if (rect.left >= 300) newPos.x = rect.x - 300
-      else   newPos.x = rect.x + rect.width
-      if (rect.top <= 400) newPos.y = rect.top
-      else newPos.y = rect.top - 400 + rect.height
-      setPreviewPosition(newPos)
+      const newPos = { x: 0, y: 0 };
+      if (rect.left >= 300) newPos.x = rect.x - itemPreviewRef.current?.getBoundingClientRect().height;
+      else newPos.x = rect.x + rect.width;
+      if (rect.top <= 400) newPos.y = rect.top;
+      else newPos.y = rect.top - 400 + rect.height;
+      setPreviewPosition(newPos);
     };
 
   const handleMouseLeave = () => {
@@ -35,6 +38,7 @@ export const PopularItemsComponent: React.FC<PopularItemsProps> = ({
   return (
     <div>
       {activeItem ? (
+        <div ref={itemPreviewRef}>
         <ItemPreviewComponent
           item={activeItem}
           styles={{
@@ -43,6 +47,7 @@ export const PopularItemsComponent: React.FC<PopularItemsProps> = ({
             position: "fixed",
           }}
         />
+        </div>
       ) : null}
       <div>
         <p>Start game items</p>

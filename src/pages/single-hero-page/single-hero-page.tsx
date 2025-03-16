@@ -15,10 +15,10 @@ const SingleHeroPage: React.FC<ISingleHeroPageProps> = ({ heroesStats,items }) =
   const [heroStats, setHeroStats] = useState<IHeroStats | null>(null);
 
   useEffect(() => {
-    if (id && heroesStats) {
+    if (!id || !heroesStats) return
       const hero = getOneHeroWithId(heroesStats, parseInt(id));
       setHeroStats(hero);
-    }
+
   }, [id, heroesStats]);
 
   return (

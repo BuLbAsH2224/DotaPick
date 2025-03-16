@@ -1,6 +1,8 @@
 import { CSSProperties } from "react";
 import { IAbilitiesItem, IAttribItem, IItem } from "../../types";
 import "./item-preview.styles.css";
+import { ItemAttributesComponent } from "./item-attribut";
+import { ItemAbilityComponent } from "./item-ability";
 
 interface IItemPreviewProps {
   item: IItem;
@@ -28,17 +30,23 @@ export const ItemPreviewComponent: React.FC<IItemPreviewProps> = ({
             : item.behavior}
         </p>
       ) : null}
-      {item.attrib && (
+
+      {item.attrib && item.attrib.length ? (
         <div>
-          {item.attrib.map(
-            (attribItem: IAttribItem) =>
-              attribItem.display && (
-                <p>{attribItem.display.replace("{value}", attribItem.value)}</p>
-              )
-          )}
+          {item.attrib.map((thisItem: IAttribItem) => (
+            <ItemAttributesComponent attribItem={thisItem} key={thisItem.key} />
+          ))}
         </div>
-      )}
-      <p>{item.abilities && item.abilities.map((ability : IAbilitiesItem) => <span key={ability.title}>{ability.type}:{ability.title}</span>)}</p>
+      ) : null}
+
+      {item.abilities && item.abilities.length ? (
+        <div>
+          {item.abilities.map((thisItem: IAbilitiesItem) => (
+            <ItemAbilityComponent abilityItem={thisItem} key={thisItem.title} />
+          ))}
+        </div>
+      ) : null}
+      <div></div>
       <p>{item.lore}</p>
     </div>
   );

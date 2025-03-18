@@ -1,0 +1,17 @@
+
+  .heroFullBaseInfoDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
+    height: 40rem;
+  }
+ 
+  
+  .BaseInfoDiv{
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }

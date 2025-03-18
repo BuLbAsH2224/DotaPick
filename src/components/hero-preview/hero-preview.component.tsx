@@ -1,11 +1,11 @@
 import React from "react";
-import { IHeroPreview } from "../../types";
+import { IHeroStats } from "../../types";
 import "./hero-preview.styles.css";
 import { Link } from "react-router-dom";
 import { getHeroAttributeImage, getHeroImageUrlFromName } from "../../utils";
 
 interface IHeroPreviewProps {
-  hero: IHeroPreview;
+  hero:  IHeroStats;
 }
 
 export const HeroPreviewComponent: React.FC<IHeroPreviewProps> = ({ hero }) => {

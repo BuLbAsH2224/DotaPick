@@ -1,0 +1,30 @@
+.itemPreviewTargetText {
+  color: #819092;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.itemPreviewTargets {
+  color: #bfc2c4;
+  padding-left: 0.3rem;
+}
+.itemPreviewDispellableText {
+  color: #819092;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.itemPreviewDispellableInfo {
+  color: #bfc2c4;
+  padding-left: 0.3rem;
+}
+.itemBaseInfo {
+  padding: 1rem;
+}
+.itemBaseInfoAndAttrHR {
+  border: solid 0.1rem #29353B;
+  width: calc(100% - (0.85rem * 2));
+  margin-left: auto;
+  margin-right: auto;
+}
+.itemAttrDiv{
+    padding: 1rem;
+}

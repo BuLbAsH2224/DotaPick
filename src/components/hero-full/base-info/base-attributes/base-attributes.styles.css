@@ -1,0 +1,26 @@
+.BaseAttributesHeaderDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.BaseAttributesDiv{
+ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.BaseAttributesDiv img{
+    object-fit: contain;
+    width: 4.5rem;
+}
+.BaseAttributesBase{
+    color: white;
+    font-size: 3.5rem;
+}
+.BaseAttributesGain{
+    color: white;
+    font-size: 1.8rem;
+}

@@ -1,4 +1,7 @@
-.heroFullVideo {
-    object-fit: contain;
-    width: 50rem;
-  }
+.heroFullCompDiv{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(167, 183, 255, 0.1);
+  border-radius: 1rem;
+}

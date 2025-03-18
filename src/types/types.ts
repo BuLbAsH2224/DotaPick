@@ -13,6 +13,9 @@ export interface IAbilitiesItem{
 export interface IItem {
   abilities: IAbilitiesItem[];
   hint: string[];
+  dispellable?: string,
+  target_team?: string,
+  target_type? : string[]
   id: number;
   img: string;
   dname: string;

@@ -1,0 +1,116 @@
+.itemAbilityDiv_active{
+   padding: 0.8rem;
+}
+.itemAbilityTypeNameDiv_active{
+    width: 100%;
+    background: linear-gradient(90deg,   #373B7F 0%, #181E30 100%);
+    padding: 0.4rem;
+}
+.itemAbilityTypeName_active{
+    color: #9595C6;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #1A1B39;
+}
+.itemAbilityDescDiv_active{
+    background-color: #181E30;
+}
+.itemAbilityDesc_active{
+    color: #5D6384;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+
+.itemAbilityDiv_passive{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_passive{
+     width: 100%;
+     background: linear-gradient(90deg,   #263540 0%, #1C2630 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_passive{
+     color: #798697;
+     font-size: 1.2rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 4px #151C21;
+ }
+ .itemAbilityDescDiv_passive{
+     background-color: #1C2630;
+ }
+ .itemAbilityDesc_passive{
+     color: #535E6A;
+     padding: 0.5rem;
+     font-size: 1rem;
+ }
+
+ .itemAbilityDiv_use{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_use{
+     width: 100%;
+     background: linear-gradient(90deg,   #273F27 0%, #17231F 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_use{
+     color: #93BE79;
+     font-size: 1.2rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 4px #121E13;
+ }
+ .itemAbilityDescDiv_use{
+     background-color: #17231F;
+ }
+ .itemAbilityDesc_use{
+     color: #6f816b;
+     padding: 0.5rem;
+     font-size: 1rem;
+ }
+
+
+ .itemAbilityDiv_toggle{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_toggle{
+     width: 100%;
+     background: linear-gradient(90deg,   #373B7F 0%, #181E30 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_toggle{
+     color: #9595C6;
+     font-size: 1.2rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 4px #1A1B39;
+ }
+ .itemAbilityDescDiv_toggle{
+     background-color: #181E30;
+ }
+ .itemAbilityDesc_toggle{
+     color: #5D6384;
+     padding: 0.5rem;
+     font-size: 1rem;
+ }
+ 
+ .itemAbilityDiv_upgrade{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_upgrade{
+     width: 100%;
+     background: linear-gradient(90deg,   #263540 0%, #1C2630 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_upgrade{
+     color: #798697;
+     font-size: 1.2rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 4px #151C21;
+ }
+ .itemAbilityDescDiv_upgrade{
+     background-color: #1C2630;
+ }
+ .itemAbilityDesc_upgrade{
+     color: #535E6A;
+     padding: 0.5rem;
+     font-size: 1rem;
+ }

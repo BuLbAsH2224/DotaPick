@@ -11,7 +11,6 @@ import "./hero-full.styles.css";
 import { useQuery } from "@tanstack/react-query";
 import { getHeroPopularItems } from "../../api";
 import { PopularItemsComponent } from "./popular-items";
-
 interface IHeroFullProps {
   hero: IHeroStats;
   items: IItems | undefined;
@@ -56,6 +55,7 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
     <div className="heroFullCompDiv">
       <BaseInfoComponent hero={hero} />
       {popularItems ? (
+        
         <PopularItemsComponent popularItems={popularItems} />
       ) : (
         <p className="loadingText">Loading..</p>

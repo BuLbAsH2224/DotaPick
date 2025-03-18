@@ -1,53 +1,57 @@
-import { CSSProperties } from "react";
-import { IAbilitiesItem, IAttribItem, IItem } from "../../types";
+import { CSSProperties, forwardRef } from "react";
+import { IAbilitiesItem, IItem } from "../../types";
 import "./item-preview.styles.css";
-import { ItemAttributesComponent } from "./item-attribut";
 import { ItemAbilityComponent } from "./item-ability";
+import { ItemBaseInfoComponent } from "./item-base-info";
 
 interface IItemPreviewProps {
   item: IItem;
   styles?: CSSProperties;
 }
 
-export const ItemPreviewComponent: React.FC<IItemPreviewProps> = ({
-  item,
-  styles,
-}) => {
-  console.log(item);
+export const ItemPreviewComponent = forwardRef<
+  HTMLDivElement,
+  IItemPreviewProps
+>(({ item, styles }, ref) => {
   return (
-    <div style={styles} className="itemPreviewDiv">
-      <img
-        src={`https://cdn.akamai.steamstatic.com/${item.img}`}
-        alt="item image"
-      />
-      <p>{item.dname}</p>
-      <p>{item.cost}</p>
-      {item.behavior ? (
-        <p>
-          TARGET:
-          {Array.isArray(item.behavior)
-            ? [...item.behavior].join("/")
-            : item.behavior}
-        </p>
-      ) : null}
+    <div ref={ref} style={styles} className="itemPreviewDiv">
+      <div className="itemPreviewBaseInfo">
+        <img
+          className="itemPreviewImg"
+          src={`https://cdn.akamai.steamstatic.com/${item.img}`}
+          alt="item image"
+        />
+        <div className="itemPreviewNameAndCostDiv">
+          <p className="itemPreviewName">{item.dname}</p>
 
-      {item.attrib && item.attrib.length ? (
-        <div>
-          {item.attrib.map((thisItem: IAttribItem) => (
-            <ItemAttributesComponent attribItem={thisItem} key={thisItem.key} />
-          ))}
+          <div className="itemPreviewCostDiv">
+            <img
+              className="itemPreviewCostImg"
+              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/gold.png"
+              alt="gold icon"
+            />
+            <p className="itemPreviewCostText">{item.cost}</p>
+          </div>
         </div>
-      ) : null}
-
-      {item.abilities && item.abilities.length ? (
-        <div>
-          {item.abilities.map((thisItem: IAbilitiesItem) => (
-            <ItemAbilityComponent abilityItem={thisItem} key={thisItem.title} />
-          ))}
-        </div>
-      ) : null}
-      <div></div>
-      <p>{item.lore}</p>
+      </div>
+      <div className="itemPreviewOtherInfoDiv">
+        <ItemBaseInfoComponent item={item} />
+        {item.abilities && item.abilities.length ? (
+          <div>
+            {item.abilities.map((thisItem: IAbilitiesItem) => (
+              <ItemAbilityComponent
+                abilityItem={thisItem}
+                key={thisItem.description}
+              />
+            ))}
+          </div>
+        ) : null}
+        {item.lore ? (
+          <div className="itemPreviewLoreDiv">
+            <p className="itemPreviewLore">{item.lore}</p>
+          </div>
+        ) : null}
+      </div>
     </div>
   );
-};
+});

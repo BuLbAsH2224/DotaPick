@@ -1,5 +1,57 @@
 .itemPreviewDiv{
-    height: 400px;
-    width: 300px;
-    background-color: white;
+
+    width: 350px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+.itemPreviewNameAndCostDiv{
+    display: flex;
+    flex-direction: column;
+}
+.itemPreviewBaseInfo{
+    background-color: #222C35;
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    align-items: center;
+    gap: 1.2rem;
+    padding-left: 1rem;
+}
+.itemPreviewImg{
+    object-fit: cover;
+    width: 5.5rem;
+    border: solid black 1px;
+}
+.itemPreviewName{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+
+}
+
+.itemPreviewCostDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 0.2rem;
+}
+.itemPreviewCostImg{
+    object-fit: contain;
+    width: 1.2rem;
+}
+.itemPreviewCostText{
+    color: white;
+    font-size: 1rem;
+    color: #DFC555;
+}
+.itemPreviewOtherInfoDiv{
+    background: linear-gradient(0deg, #10171D 0%, #15222A 100%);
+}
+.itemPreviewLore{
+    background-color: #0D1118;
+    color: #474C54;
+    padding: 0.5rem;
+    font-style: italic;
+}
+.itemPreviewLoreDiv{
+    font-style: italic;
+    padding: 0.8rem;
 }

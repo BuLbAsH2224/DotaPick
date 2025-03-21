@@ -11,7 +11,7 @@ interface IHeroPreviewProps {
 export const HeroPreviewComponent: React.FC<IHeroPreviewProps> = ({ hero }) => {
   return (
     <Link to={`/singleHero/${hero.id}` }>
-      <div className="heroPreviewDiv" >
+      <div className={`heroPreviewDiv heroPreviewDiv_${hero.primary_attr}`} >
         <img
           src={getHeroImageUrlFromName(hero.name)}
           className="heroPreviewImg"

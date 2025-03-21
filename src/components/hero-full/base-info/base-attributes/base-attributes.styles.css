@@ -18,9 +18,12 @@
 }
 .BaseAttributesBase{
     color: white;
-    font-size: 3.5rem;
+    font-size: 3.5rem;  
+    font-weight: bolder;
+    text-shadow: black 4px 2px 5px;
 }
 .BaseAttributesGain{
     color: white;
     font-size: 1.8rem;
+    text-shadow: black 3px 1px;
 }

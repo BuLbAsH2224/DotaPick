@@ -24,19 +24,21 @@ export const PopularItemsPreviewComponent: React.FC<
     const imgRect = imageEl.getBoundingClientRect();
    
     if (imgRect.left >= itemPreviewBounds.width) {
-      newComponentPos.x = imgRect.left - itemPreviewBounds.width;
+   
+      newComponentPos.x = imgRect.left - itemPreviewBounds.width ;
     } else {
-      newComponentPos.x = imgRect.right;
+      newComponentPos.x = imgRect.right ;
     }
 
     if (window.innerHeight - imgRect.bottom >= itemPreviewBounds.height) {
-      newComponentPos.y = imgRect.top;
+      newComponentPos.y = imgRect.top ;
     } else {
       newComponentPos.y = imgRect.bottom - itemPreviewBounds.height;
     }
     setDisplayItemInfo(true);
     setPosition(newComponentPos);
   };
+  
   useEffect(() => {
     const handleWindowScroll = () => {
       setDisplayItemInfo(false);

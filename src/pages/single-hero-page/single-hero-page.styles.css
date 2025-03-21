@@ -1,0 +1,16 @@
+.pudgeHookImg{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    z-index: 2;
+    animation: slideInHook 1s linear forwards;
+}
+
+@keyframes slideInHook {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}

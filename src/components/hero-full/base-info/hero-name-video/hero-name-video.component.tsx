@@ -12,7 +12,7 @@ export const HeroNameVideoComponent: React.FC<IHeroNameVideoProps> = ({
   hero,
 }) => {
   return (
-    <div className="heroFullInfoAndVideoDiv">
+    <div className={`heroFullInfoAndVideoDiv heroAttr_${hero.primary_attr}`}>
       <div className="heroFullNameAndAttrDiv">
       <img
         src={getHeroAttributeImage(hero.primary_attr)}

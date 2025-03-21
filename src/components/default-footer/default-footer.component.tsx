@@ -17,8 +17,8 @@ export const DefaultFooter: React.FC = () => {
         <a href="https://www.valvesoftware.com/en/about">
           <img className="footerImg" src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/valve_logo.png" />
         </a>
-        <a className="footerImg" href="#hero_pick" onClick={handleLogoClick}>
-          <img src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/dota_footer_logo.png" />
+        <a href="#hero_pick" onClick={handleLogoClick}>
+          <img className="footerImg" src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/dota_footer_logo.png" />
         </a>
       </div>
       <div className="seconddivfooter">

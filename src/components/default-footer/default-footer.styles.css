@@ -1,14 +1,34 @@
 .defaultFooterMain {
-    height: 3rem;
-    background-color: rgba(10, 10, 10, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    font-size: 0.9rem;
-  }
-  
-  .defaultFooterMain a {
-    font-size: 1.2rem;
-    color: #ccc;
-  }
+  height: 8rem;
+  width: 100%;
+  background-color: black;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.firstdivfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+img {
+  height: 30px;
+  object-fit: contain;
+}
+
+.defaultFooterMain a {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.seconddivfooter {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  width: 60%;
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 20px;
+}

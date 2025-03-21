@@ -2,28 +2,27 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- 
 }
 
 html {
-  height: auto; 
+  height: auto;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; 
+  min-height: 100vh;
   background: url("/src/assets/background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  
 }
 
 #root {
   display: flex;
   flex-direction: column;
-  min-height: 105vh; 
+  min-height: 105vh;
 }
 
 .mainContent {
@@ -31,7 +30,7 @@ body {
   flex: 1;
   padding: 1rem;
 }
-.loadingText{
+.loadingText {
   font-size: 2rem;
   color: white;
   font-weight: bolder;

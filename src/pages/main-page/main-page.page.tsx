@@ -12,7 +12,7 @@ const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
   return (
     <>
       <div className="mainPageAboutTextDiv">
-        <h2>Выберите героя</h2>
+        <h2 id="hero_pick">Выберите героя</h2>
         <p className="int">
           Список героев в Dota 2 огромен и безгранично разнообразен: здесь вы
           встретите и магов-тактиков, и свирепых громил,и хитроумных негодяев.

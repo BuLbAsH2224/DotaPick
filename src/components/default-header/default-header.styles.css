@@ -23,3 +23,24 @@
 .homeIcon:hover {
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  .defaultHeaderMain {
+    height: 3.5rem;
+    padding: 0 0.7rem;
+  }
+
+  .homeIcon {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .defaultHeaderMain {
+    height: 3rem;
+    padding: 0 0.5rem;
+  }
+
+  .homeIcon {
+    width: 2rem;
+  }
+}

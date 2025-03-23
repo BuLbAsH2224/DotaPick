@@ -38,3 +38,35 @@
     width: 1.5rem;
     opacity: 0;
 }
+@media (max-width: 768px) {
+    .SearchHeroDiv {
+      width: 14rem;
+      height: 2.8rem;
+    }
+  
+    .SearchHeroInput {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .SearchHeroDiv {
+      width: 100%;
+      max-width: 16rem;
+      height: 2.5rem;
+      border-radius: 0.8rem;
+    }
+  
+    .SearchHeroIconImage {
+      width: 1.1rem;
+    }
+  
+    .SearchHeroInput {
+      font-size: 1rem;
+    }
+  
+    .clearSearchInputActive {
+      width: 1.3rem;
+    }
+  }
+  

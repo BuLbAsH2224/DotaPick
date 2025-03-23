@@ -32,3 +32,45 @@
     font-weight: bolder;
     text-shadow: black 1px 0 5px;
 }
+@media (max-width: 1200px) {
+    .BaseHeroHealth span,
+    .BaseHeroMana span {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .BaseHeroHealth,
+    .BaseHeroMana {
+      padding: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .BaseHealthManaDiv {
+      gap: 0.8rem;
+    }
+  
+    .BaseHeroHealth span,
+    .BaseHeroMana span {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .BaseHealthManaDiv {
+      gap: 0.6rem;
+    }
+  
+    .BaseHeroHealth,
+    .BaseHeroMana {
+      border-radius: 0.7rem;
+      padding: 0.3rem;
+    }
+  
+    .BaseHeroHealth span,
+    .BaseHeroMana span {
+      font-size: 1.5rem;
+    }
+  }
+  

@@ -9,3 +9,43 @@
   padding-left: 0.2rem;
   padding-right: 0.2rem;
 }
+@media (max-width: 768px) {
+  .itemAttrText,
+  .itemAttrValueText {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemAttrText,
+  .itemAttrValueText {
+    font-size: 0.9rem;
+  }
+
+  .itemAttrValueText {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+  }
+}
+@media (max-width: 360px) {
+  .itemPreviewTargetText,
+  .itemPreviewDispellableText {
+    font-size: 0.8rem;
+  }
+
+  .itemPreviewTargets,
+  .itemPreviewDispellableInfo {
+    font-size: 0.8rem;
+    padding-left: 0.15rem;
+  }
+
+  .itemBaseInfo,
+  .itemAttrDiv {
+    padding: 0.6rem;
+  }
+
+  .itemBaseInfoAndAttrHR {
+    width: calc(100% - (0.5rem * 2));
+    border-width: 0.05rem;
+  }
+}

@@ -15,4 +15,19 @@
     z-index: 2;
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.3))
   }
-  
+
+@media (max-width: 768px) {
+  .buttonAttrImage {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonAttrImage {
+    width: 2rem;
+  }
+
+  .AttrCheckbox:checked ~ .buttonAttrImage {
+    transform: scale(1.15, 1.15);
+  }
+}

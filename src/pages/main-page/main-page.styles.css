@@ -32,3 +32,39 @@ p.HeroesNotFound{
   color: white;
   font-size: 5rem;
 }
+
+@media (max-width: 768px) {
+  .int {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  #hero_pick {
+    height: 80px;
+    font-size: 3rem;
+  }
+
+  p.HeroesNotFound {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroPreviewsDiv {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .int {
+    font-size: 1.2rem;
+  }
+
+  #hero_pick {
+    height: 60px;
+    font-size: 2.5rem;
+  }
+
+  p.HeroesNotFound {
+    font-size: 2.5rem;
+  }
+}

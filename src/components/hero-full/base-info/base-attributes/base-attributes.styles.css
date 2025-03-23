@@ -1,29 +1,92 @@
-.BaseAttributesHeaderDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+.BaseAttributesHeaderDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
 }
-.BaseAttributesDiv{
- 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.3rem;
+.BaseAttributesDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-.BaseAttributesDiv img{
-    object-fit: contain;
-    width: 4.5rem;
+.BaseAttributesDiv img {
+  object-fit: contain;
+  width: 4.5rem;
 }
-.BaseAttributesBase{
-    color: white;
-    font-size: 3.5rem;  
-    font-weight: bolder;
-    text-shadow: black 4px 2px 5px;
+.BaseAttributesBase {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  text-shadow: black 4px 2px 5px;
 }
-.BaseAttributesGain{
-    color: white;
-    font-size: 1.8rem;
-    text-shadow: black 3px 1px;
+.BaseAttributesGain {
+  color: white;
+  font-size: 1.8rem;
+  text-shadow: black 3px 1px;
+}
+@media (max-width: 1200px) {
+  .BaseAttributesBase {
+    font-size: 3rem;
+  }
+
+  .BaseAttributesGain {
+    font-size: 1.6rem;
+  }
+
+  .BaseAttributesDiv img {
+    width: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .BaseAttributesBase {
+    font-size: 2.7rem;
+  }
+
+  .BaseAttributesGain {
+    font-size: 1.5rem;
+  }
+
+  .BaseAttributesDiv img {
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .BaseAttributesBase {
+    font-size: 2.3rem;
+  }
+
+  .BaseAttributesGain {
+    font-size: 1.3rem;
+  }
+
+  .BaseAttributesDiv img {
+    width: 3rem;
+  }
+
+  .BaseAttributesDiv {
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .BaseAttributesHeaderDiv {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .BaseAttributesBase {
+    font-size: 2rem;
+  }
+
+  .BaseAttributesGain {
+    font-size: 1.1rem;
+  }
+
+  .BaseAttributesDiv img {
+    width: 2.5rem;
+  }
 }

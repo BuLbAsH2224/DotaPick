@@ -3,3 +3,18 @@
     font-size: 2rem;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .notFoundPageDiv {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notFoundPageDiv {
+      font-size: 1.2rem;
+      padding: 0 0.5rem;
+    }
+  }
+  

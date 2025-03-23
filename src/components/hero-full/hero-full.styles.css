@@ -17,3 +17,15 @@
     margin-left: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .heroFullCompDiv {
+    border-radius: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroFullCompDiv {
+    border-radius: 0.5rem;
+  }
+}

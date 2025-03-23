@@ -114,3 +114,85 @@
      padding: 0.5rem;
      font-size: 1rem;
  }
+ @media (max-width: 768px) {
+    .itemAbilityDiv_active,
+    .itemAbilityDiv_passive,
+    .itemAbilityDiv_use,
+    .itemAbilityDiv_toggle,
+    .itemAbilityDiv_upgrade {
+      padding: 0.7rem;
+    }
+  
+    .itemAbilityTypeNameDiv_active,
+    .itemAbilityTypeNameDiv_passive,
+    .itemAbilityTypeNameDiv_use,
+    .itemAbilityTypeNameDiv_toggle,
+    .itemAbilityTypeNameDiv_upgrade {
+      padding: 0.35rem;
+    }
+  
+    .itemAbilityTypeName_active,
+    .itemAbilityTypeName_passive,
+    .itemAbilityTypeName_use,
+    .itemAbilityTypeName_toggle,
+    .itemAbilityTypeName_upgrade {
+      font-size: 1.1rem;
+    }
+  
+    .itemAbilityDesc_active,
+    .itemAbilityDesc_passive,
+    .itemAbilityDesc_use,
+    .itemAbilityDesc_toggle,
+    .itemAbilityDesc_upgrade {
+      padding: 0.45rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .itemAbilityDiv_active,
+    .itemAbilityDiv_passive,
+    .itemAbilityDiv_use,
+    .itemAbilityDiv_toggle,
+    .itemAbilityDiv_upgrade {
+      padding: 0.6rem;
+    }
+  
+    .itemAbilityTypeNameDiv_active,
+    .itemAbilityTypeNameDiv_passive,
+    .itemAbilityTypeNameDiv_use,
+    .itemAbilityTypeNameDiv_toggle,
+    .itemAbilityTypeNameDiv_upgrade {
+      padding: 0.3rem;
+    }
+  
+    .itemAbilityTypeName_active,
+    .itemAbilityTypeName_passive,
+    .itemAbilityTypeName_use,
+    .itemAbilityTypeName_toggle,
+    .itemAbilityTypeName_upgrade {
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  
+    .itemAbilityDesc_active,
+    .itemAbilityDesc_passive,
+    .itemAbilityDesc_use,
+    .itemAbilityDesc_toggle,
+    .itemAbilityDesc_upgrade {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 360px) {
+    .itemAttrText,
+    .itemAttrValueText {
+      font-size: 0.8rem;
+    }
+  
+    .itemAttrValueText {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+    }
+  }
+  

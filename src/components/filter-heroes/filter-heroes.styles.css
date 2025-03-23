@@ -5,3 +5,19 @@
     align-items: center;
     width: 30rem;
 }
+@media (max-width: 768px) {
+    .FiltersAndFoundDiv {
+      width: 100%;
+      max-width: 25rem;
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .FiltersAndFoundDiv {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+  }
+  

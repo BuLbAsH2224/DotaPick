@@ -11,8 +11,12 @@ const HeroRoulettePage: React.FC<IHeroRoulettePageProps> = ({
 }) => {
   return (
     <>
-      <h2>Рулетка героев</h2>
-      <p>Рулетка героев - поможет выбрать вам персонажа</p>
+      <div className="rouletteHeaderContainer">
+        <h1 className="rouletteHeader">Рулетка героев</h1>
+        <p className="rouletteHeaderText">
+          Рулетка героев - поможет выбрать вам персонажа
+        </p>
+      </div>
       {heroesStats ? (
         <HeroRouletteComponent heroes={heroesStats} />
       ) : (

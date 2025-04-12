@@ -1,7 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { IHeroStats } from "../../types";
 import "./hero-roulette.styles.css";
+import "react-roulette-pro/dist/index.css";
+import RoulettePro from "react-roulette-pro";
 import { getHeroImageUrlFromName } from "../../utils";
+import { HeroPreviewComponent } from "../hero-preview";
 
 interface IHeroRouletteProps {
   heroes: IHeroStats[];
@@ -10,43 +13,56 @@ interface IHeroRouletteProps {
 export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   heroes,
 }) => {
-  const rouletteEventes: { interval: number | null; timeout: number | null } = {
-    interval: null,
-    timeout: null,
-  };
-  const [isActive, setIsActive] = useState<boolean>(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  const onHandleClick: React.MouseEventHandler<HTMLButtonElement> = () => {
-    if (isActive || rouletteEventes.timeout || rouletteEventes.interval) return;
-    setIsActive(true);
-    rouletteEventes.interval = setInterval(() => {
-      if (isActive) return;
+  const heroPrizes = [
+    ...heroes.map((item: IHeroStats) => {
+      return {
+        id: item.hero_id,
+        image: getHeroImageUrlFromName(item.name),
+        text: item.localized_name,
+      };
+    }),
+  ];
+  const [start, setStart] = useState(false);
 
-      if (!imgRef.current) return;
-      const randHero: IHeroStats =
-        heroes[Math.floor(Math.random() * heroes.length)];
-      imgRef.current.src = getHeroImageUrlFromName(randHero.name);
-    }, 100);
+  const jackpotSound = new Audio("jackpot-sound.mp3");
+  const [prizeIndex,setPrizeIndex] = useState<number>(0)
+  
 
-    rouletteEventes.timeout = setTimeout(() => {
-      if (!imgRef.current || !rouletteEventes.interval) return;
-      clearInterval(rouletteEventes.interval);
-      const randHero: IHeroStats =
-        heroes[Math.floor(Math.random() * heroes.length)];
-      imgRef.current.src = getHeroImageUrlFromName(randHero.name);
-      setIsActive(false);
-    }, 2000);
+  const handleStart = () => {
+    setPrizeIndex(Math.floor(Math.random() * heroes.length))
+    setStart(true);
   };
+
+  const handlePrizeDefined = () => {
+    if (heroes[prizeIndex].localized_name.toLowerCase() === "pudge")
+      jackpotSound.play();
+      setRenderPreview(true)
+    
+  };
+  const [renderPreview,setRenderPreview] = useState<boolean>(false)
+  const handleOnClickClose :  React.MouseEventHandler<HTMLButtonElement> = ()  => {
+    setRenderPreview(false)
+    setStart(false);
+  }
   return (
-    <div>
-      <img
-        ref={imgRef}
-        src={getHeroImageUrlFromName(heroes[0].name)}
-        alt="roulette hero"
+    <>
+      <div className="rouletteHeroPreview" style={{ visibility: !renderPreview ? "hidden" : "visible"}}>
+        <HeroPreviewComponent hero={heroes[prizeIndex]} />
+        <button onClick={handleOnClickClose}>Закрыть</button>
+      </div>
+      <RoulettePro
+        prizes={[...heroPrizes, ...heroPrizes.slice(heroPrizes.length - 20)]}
+        prizeIndex={prizeIndex}
+        start={start}
+        options={{stopInCenter: true}}
+        defaultDesignOptions={{ prizesWithText: true}}
+        soundWhileSpinning="revolver-chamber-spin-ratchet-sound-90521.mp3"
+        spinningTime={2}
+        onPrizeDefined={handlePrizeDefined}
       />
-      <button onClick={onHandleClick} disabled={isActive}>
-        {isActive ? "Крутится..." : "Прокрутить"}
+      <button onClick={handleStart} disabled={start}>
+        {start ? "Крутится..." : "Крутить"}
       </button>
-    </div>
+    </>
   );
 };

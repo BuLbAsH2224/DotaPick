@@ -6,7 +6,7 @@ export const DefaultHeader : React.FC = () => {
   return (
     <header className="defaultHeaderMain">
         <Link to="/"><img src={homeIcon} className="homeIcon" /></Link>
-        <Link to="/heroRoulette">Рулетка героев</Link>
+        <Link className='headerLinkToRoulette' to="/heroRoulette">Рулетка героев</Link>
     </header>
   )
 }

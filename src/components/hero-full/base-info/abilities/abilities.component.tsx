@@ -40,7 +40,7 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
   }, [heroAbilities, hero]);
   return (
     <>
-      <p className="abilityText">Способности</p>
+  
       <div className="heroAbilitiesContainer">
         {heroDetailAbilities?.map((item: IAbility, ind) => {
           if (item.desc)

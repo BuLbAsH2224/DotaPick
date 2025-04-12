@@ -8,8 +8,6 @@ export const getAbilityVideo = (
     ""
   )
   const url = `https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/${heroNameFilter}/${abilityFilter}.mp4`;
-  console.log(url);
+
   return url;
 };
-// https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/invoker/invoker_ghost_walk.webm
-// https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/abilities/invoker/invoker_ghost_walk.webm

@@ -5,11 +5,13 @@
   width: 100%;
   justify-content: center;
   border-bottom: 0.1rem solid white;
+  gap: 0.5rem;
 }
 .heroFullNameAndAttrDiv p {
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
   font-weight: bolder;
+  text-shadow: 2px 2px 1px#000000;
 }
 .heroFullInfoAndVideoDiv {
   width: 32rem;
@@ -24,7 +26,7 @@
 }
 .heroFullInfoAndVideoDiv:hover {
   transition: transform 0.5s;
-  transform: translateY(-5px);
+  transform: scale(1.1,1.1);
 }
 .heroFullVideo {
   object-fit: contain;
@@ -34,11 +36,13 @@
 .heroAttrFromNameAndVideo {
   object-fit: contain;
   width: 3.5rem;
+  filter: drop-shadow(1.5px 1.5px 0px black);
 }
 
 .heroAttr_all {
   box-shadow: 3px 3px 0.5rem #ec1506, -3px 0px 0.5rem #00d9ec,
     0px -3px 0.5rem #26e030;
+ 
 }
 .heroAttr_int {
   box-shadow: 0px 0px 0.5rem #00d9ec;

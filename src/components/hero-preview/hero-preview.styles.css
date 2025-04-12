@@ -5,6 +5,7 @@
   border-radius: 0.5rem;
   transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
   cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 .heroPreviewDiv:hover {
@@ -28,6 +29,7 @@
 .heroPreviewAttributeImage {
   object-fit: contain;
   width: 2rem;
+  filter: drop-shadow(2.5px 2.5px 0px black);
 }
 .heroPreviewImg {
   width: 100%;
@@ -38,6 +40,7 @@
 }
 
 .heroPreviewName {
+  text-shadow: 2px 2px 1px#000000;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -55,6 +58,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  
 }
 
 .heroPreviewDiv:hover .heroPreviewName {

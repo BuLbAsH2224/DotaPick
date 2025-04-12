@@ -1,7 +1,9 @@
 import React from "react";
 import "./attribute-choose-buttons.styles.css";
-import { filterButtonType } from "../../../types";
 import { getHeroAttributeImage } from "../../../utils";
+
+type filterButtonType = string | null;
+
 
 interface IAttributeChooseButtons {
   Attr : filterButtonType,

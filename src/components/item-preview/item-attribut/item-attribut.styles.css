@@ -1,13 +1,17 @@
 .itemAttrText {
-  color: #819092;
-  font-size: 1rem;
+  color: #737E8F;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 .itemAttrValueText {
-  color: #bfc2c4;
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 0.8rem;
   font-weight: bolder;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
 }
 @media (max-width: 768px) {
   .itemAttrText,

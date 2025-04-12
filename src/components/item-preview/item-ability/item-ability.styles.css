@@ -1,48 +1,53 @@
-.itemAbilityDiv_active{
+.itemAbilityDiv_active, .itemAbilityDiv_toggle{
    padding: 0.8rem;
 }
-.itemAbilityTypeNameDiv_active{
+.itemAbilityTypeNameDiv_active, .itemAbilityTypeNameDiv_toggle{
     width: 100%;
     background: linear-gradient(90deg,   #373B7F 0%, #181E30 100%);
     padding: 0.4rem;
+    
 }
-.itemAbilityTypeName_active{
+.itemAbilityTypeName_active, .itemAbilityTypeName_toggle{
     color: #9595C6;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: bolder;
-    text-shadow: 2px 2px 4px #1A1B39;
+    text-shadow: 2px 2px 2px #161935;
 }
-.itemAbilityDescDiv_active{
+.itemAbilityDescDiv_active, .itemAbilityDescDiv_toggle{
     background-color: #181E30;
 }
-.itemAbilityDesc_active{
+.itemAbilityDesc_active, .itemAbilityDesc_toggle{
     color: #5D6384;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 
-.itemAbilityDiv_passive{
+.itemAbilityDiv_passive, .itemAbilityDiv_upgrade{
     padding: 0.8rem;
  }
- .itemAbilityTypeNameDiv_passive{
+ .itemAbilityTypeNameDiv_passive, .itemAbilityTypeNameDiv_upgrade{
      width: 100%;
      background: linear-gradient(90deg,   #263540 0%, #1C2630 100%);
      padding: 0.4rem;
  }
- .itemAbilityTypeName_passive{
+ .itemAbilityTypeName_passive,  .itemAbilityTypeName_upgrade{
      color: #798697;
-     font-size: 1.2rem;
+     font-size: 0.9rem;
      font-weight: bolder;
-     text-shadow: 2px 2px 4px #151C21;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
  }
- .itemAbilityDescDiv_passive{
+ .itemAbilityDescDiv_passive, .itemAbilityDescDiv_upgrade{
      background-color: #1C2630;
  }
- .itemAbilityDesc_passive{
-     color: #535E6A;
+ .itemAbilityDesc_passive, .itemAbilityDesc_upgrade{
+     color: #616B79;
      padding: 0.5rem;
-     font-size: 1rem;
+     font-size: 0.8rem;
+     font-weight: 900;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
  }
 
  .itemAbilityDiv_use{
@@ -55,9 +60,9 @@
  }
  .itemAbilityTypeName_use{
      color: #93BE79;
-     font-size: 1.2rem;
+     font-size: 0.9rem;
      font-weight: bolder;
-     text-shadow: 2px 2px 4px #121E13;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
  }
  .itemAbilityDescDiv_use{
      background-color: #17231F;
@@ -65,55 +70,14 @@
  .itemAbilityDesc_use{
      color: #6f816b;
      padding: 0.5rem;
-     font-size: 1rem;
+     font-weight: 900;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+     font-size: 0.8rem;
  }
 
 
- .itemAbilityDiv_toggle{
-    padding: 0.8rem;
- }
- .itemAbilityTypeNameDiv_toggle{
-     width: 100%;
-     background: linear-gradient(90deg,   #373B7F 0%, #181E30 100%);
-     padding: 0.4rem;
- }
- .itemAbilityTypeName_toggle{
-     color: #9595C6;
-     font-size: 1.2rem;
-     font-weight: bolder;
-     text-shadow: 2px 2px 4px #1A1B39;
- }
- .itemAbilityDescDiv_toggle{
-     background-color: #181E30;
- }
- .itemAbilityDesc_toggle{
-     color: #5D6384;
-     padding: 0.5rem;
-     font-size: 1rem;
- }
- 
- .itemAbilityDiv_upgrade{
-    padding: 0.8rem;
- }
- .itemAbilityTypeNameDiv_upgrade{
-     width: 100%;
-     background: linear-gradient(90deg,   #263540 0%, #1C2630 100%);
-     padding: 0.4rem;
- }
- .itemAbilityTypeName_upgrade{
-     color: #798697;
-     font-size: 1.2rem;
-     font-weight: bolder;
-     text-shadow: 2px 2px 4px #151C21;
- }
- .itemAbilityDescDiv_upgrade{
-     background-color: #1C2630;
- }
- .itemAbilityDesc_upgrade{
-     color: #535E6A;
-     padding: 0.5rem;
-     font-size: 1rem;
- }
+
+
  @media (max-width: 768px) {
     .itemAbilityDiv_active,
     .itemAbilityDiv_passive,

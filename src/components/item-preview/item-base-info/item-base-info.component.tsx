@@ -8,20 +8,19 @@ interface IItemBaseInfoProps {
 export const ItemBaseInfoComponent: React.FC<IItemBaseInfoProps> = ({
   item,
 }) => {
-
   return (
     <div>
         <div className="itemBaseInfo">
-      {item.behavior ? (
+     
         <p className="itemPreviewTargetText">
-          TARGET:
+          TYPE:
           <span className="itemPreviewTargets">
             {Array.isArray(item.behavior)
               ? [...item.behavior].join("/")
-              : item.behavior}
+              : (item.behavior ? item.behavior : "Passive")}
           </span>
         </p>
-      ) : null}
+     
       {item.dispellable ? (
         <p className="itemPreviewDispellableText">
           DISPELLABLE: <span className="itemPreviewDispellableInfo">{item.dispellable}</span>

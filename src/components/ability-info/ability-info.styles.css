@@ -1,0 +1,87 @@
+.abilityInfoVideo{
+    padding: 0.8rem;
+ 
+}
+.abilityInfoContainer{
+    background-color: #11181D ;
+    width: 20rem;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px black;
+}
+.abilityInfoName{
+    color: white;
+    font-weight: 600;
+    text-shadow: 2px 2px 1px#000000;
+    font-size: 1.4rem;
+    background-color: #222D32;
+    padding: 0.8rem;
+}
+.abilityInfoHR {
+    padding-top: 0.1rem;
+    border: none;
+    border-bottom: solid 0.15rem #29353B;
+    width: calc(100% - (0.85rem * 2));
+    margin-left: auto;
+    margin-right: auto;
+  }
+.bkbpierceYes{
+color: #64CF66;
+}
+.dispellStrong{
+    color: #B00506;
+}
+.abilityInfoBaseContainer{
+    font-weight: 600;
+    color: #536780;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+}
+.abilityInfoDamageType_magical{
+    color: #5589C2; ;
+}
+.abilityInfoDamageType_pure{
+    color: #D2A952 ;
+}
+.abilityInfoDamageType_physical{
+    color: #AF3029 ;
+}
+.abilityInfoDesc{
+    font-weight: 600;
+    color: #8497AF;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+}
+.abilityInfoCooldownContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+.abilityInfoCooldownImg{
+    object-fit: contain;
+    width: 1rem;
+    filter: drop-shadow(0px 0px 2px rgb(0, 0, 0));
+    border-radius: 0.2rem;
+}
+.abilityInfoCooldownText{
+    color: #4f545a;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.abilityInfoSkillInfo{
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.abilityInfoAttrContainer{
+    padding: 0.8rem;
+}
+.abilityInfoAttrText{
+    font-weight: 600;
+    color: #536780;
+    font-size: 0.7rem;
+}

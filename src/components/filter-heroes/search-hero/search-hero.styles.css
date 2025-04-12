@@ -1,72 +1,73 @@
-.SearchHeroDiv{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 16rem;
-    height: 3rem;
-    gap:5px;
-    border: solid rgb(168, 168, 168) 0.2rem;
-    border-radius: 1rem;
-    transition: 0.1s;
-}
-.SearchHeroIconImage{
-    object-fit: contain;
-    width: 1.3rem;
-}
-.SearchHeroInput{
-    width: 70%;
-    height: 100%;
-    font-size: 1.2rem;
-    border: none;
-}
-.SearchHeroInput:focus{
-    border: none;
-    outline:none
+.SearchHeroDiv {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 20rem;
+  height: 3rem;
+  padding: 0 1rem;
+  border: 2px solid #ccc;
+  border-radius: 999px;
+  transition: box-shadow 0.2s ease-in-out;
+  gap: 0.5rem;
+  transition: 0.3s;
 }
 
 .SearchHeroDiv:focus-within {
-    transition: 0.2s;
-    filter: drop-shadow(0px 0px 10px rgb(78, 78, 78)) 
-  }
-.clearSearchInputActive{
-    width: 1.5rem;
-    cursor: pointer;
+  transform-origin: center;
+  transform: scale(1.2); 
+  transition: 0.3s;
 }
-.clearSearchInputHidden{
-    width: 1.5rem;
-    opacity: 0;
+
+
+
+.SearchHeroDiv:focus-within {
+  box-shadow: 0 0 10px rgba(100, 100, 100, 0.4);
 }
+.SearchHeroIconImage {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+  opacity: 0.6;
+}
+
+.SearchHeroInput {
+  flex: 1;
+  height: 100%;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 0.5rem;
+}
+
+.SearchHeroInput::placeholder {
+  color: #aaa;
+}
+
+.SearchHeroClearIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.SearchHeroClearIcon.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.SearchHeroClearIcon.visible {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
-    .SearchHeroDiv {
-      width: 14rem;
-      height: 2.8rem;
-    }
-  
-    .SearchHeroInput {
-      font-size: 1.1rem;
-    }
+  .SearchHeroDiv {
+    height: 2.6rem;
+    padding: 0 0.8rem;
   }
-  
-  @media (max-width: 480px) {
-    .SearchHeroDiv {
-      width: 100%;
-      max-width: 16rem;
-      height: 2.5rem;
-      border-radius: 0.8rem;
-    }
-  
-    .SearchHeroIconImage {
-      width: 1.1rem;
-    }
-  
-    .SearchHeroInput {
-      font-size: 1rem;
-    }
-  
-    .clearSearchInputActive {
-      width: 1.3rem;
-    }
+
+  .SearchHeroInput {
+    font-size: 0.95rem;
   }
-  
+}

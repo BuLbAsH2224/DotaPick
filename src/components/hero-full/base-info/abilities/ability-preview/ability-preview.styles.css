@@ -1,0 +1,12 @@
+.heroAbilityImg {
+  object-fit: cover;
+  width: 7rem;
+  border-radius: 1rem;
+  filter: drop-shadow(3px 3px 2px black);
+  transition: 0.3s;
+  cursor: help;
+}
+.heroAbilityImg:hover {
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 10px rgb(255, 255, 255));
+}

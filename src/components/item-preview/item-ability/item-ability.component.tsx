@@ -11,7 +11,6 @@ export const ItemAbilityComponent: React.FC<IItemAbilityProps> = ({
     <div className={`itemAbilityDiv_${abilityItem.type}`}>
       <div className={`itemAbilityTypeNameDiv_${abilityItem.type}`}>
         <p
-          key={abilityItem.title}
           className={`itemAbilityTypeName_${abilityItem.type}`}
         >
           {abilityItem.type[0].toUpperCase() + abilityItem.type.slice(1)}:{" "}

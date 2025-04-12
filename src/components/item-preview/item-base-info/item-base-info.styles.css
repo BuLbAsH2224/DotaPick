@@ -1,7 +1,8 @@
 .itemPreviewTargetText {
   color: #819092;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 .itemPreviewTargets {
   color: #bfc2c4;
@@ -9,8 +10,9 @@
 }
 .itemPreviewDispellableText {
   color: #819092;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 .itemPreviewDispellableInfo {
   color: #bfc2c4;

@@ -1,4 +1,6 @@
 import {
+  IAbilities,
+  IHeroAbilities,
   IHeroPopularItems,
   IHeroPopularItemsID,
   IHeroStats,
@@ -14,11 +16,15 @@ import { PopularItemsComponent } from "./popular-items";
 interface IHeroFullProps {
   hero: IHeroStats;
   items: IItems | undefined;
+  abilitiesData: IAbilities | undefined;
+  heroAbilitiesData: IHeroAbilities | undefined;
 }
 
 export const HeroFullComponent: React.FC<IHeroFullProps> = ({
   hero,
   items,
+  abilitiesData,
+  heroAbilitiesData,
 }) => {
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -36,7 +42,7 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
   useEffect(() => {
     if (!heroPopularItemsData || !items) return;
     const allItemsID = Object.values(items);
-    
+
     const getItemsFromIds = (itemsData: { [key: string]: number }) => {
       return Object.keys(itemsData)
         .map((itemId) => allItemsID.find((item) => item.id === Number(itemId)))
@@ -53,9 +59,12 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
 
   return (
     <div className="heroFullCompDiv">
-      <BaseInfoComponent hero={hero} />
+      <BaseInfoComponent
+        hero={hero}
+        heroAbilities={heroAbilitiesData}
+        abilities={abilitiesData}
+      />
       {popularItems ? (
-        
         <PopularItemsComponent popularItems={popularItems} />
       ) : (
         <p className="loadingText">Loading..</p>

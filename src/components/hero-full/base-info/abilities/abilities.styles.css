@@ -1,0 +1,15 @@
+.heroAbilitiesContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 15rem;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.abilityText{
+    color: white;
+    font-weight: 600;
+    font-size: 4rem;
+    text-shadow: 4px 4px 1px#000000;
+}

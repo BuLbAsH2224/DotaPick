@@ -22,7 +22,7 @@ export const ItemPreviewComponent = forwardRef<
           alt="item image"
         />
         <div className="itemPreviewNameAndCostDiv">
-          <p className="itemPreviewName">{item.dname}</p>
+          <p className="itemPreviewName">{item.dname.toUpperCase()}</p>
 
           <div className="itemPreviewCostDiv">
             <img
@@ -34,7 +34,9 @@ export const ItemPreviewComponent = forwardRef<
           </div>
         </div>
       </div>
+      
       <div className="itemPreviewOtherInfoDiv">
+      <hr className="itemPreviewHR"/>
         <ItemBaseInfoComponent item={item} />
         {item.abilities && item.abilities.length ? (
           <div>

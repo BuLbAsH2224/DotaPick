@@ -23,7 +23,7 @@ const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
       <FilterHeroesComponent heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
       <div className="heroPreviewsDiv">
         {
-          !heroesStats ?  <h1>Loading</h1> :
+          !heroesStats ?  <h1 className="LoadingHeroesText">Loading</h1> :
           filteredHeroesStats.length ?  filteredHeroesStats.map((item) => {
             return <HeroPreviewComponent hero={item}  key={item.id}/>;
           }) : <p className="HeroesNotFound">Герои не найдены!</p>

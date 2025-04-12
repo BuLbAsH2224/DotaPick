@@ -1,168 +1,182 @@
-.itemPreviewDiv{
+.itemPreviewDiv {
+  width: 350px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+.itemPreviewNameAndCostDiv {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+div.itemPreviewBaseInfo {
+  background-color: #222c35;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+.itemPreviewImg {
+  object-fit: cover;
+  width: 5.5rem;
+  height: 4rem;
+  box-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
+.itemPreviewName {
+  color: #cccdcd;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
 
-    width: 350px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+.itemPreviewCostDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
 }
-.itemPreviewNameAndCostDiv{
-    display: flex;
-    flex-direction: column;
+.itemPreviewCostImg {
+  object-fit: contain;
+  width: 1.2rem;
 }
-.itemPreviewBaseInfo{
-    background-color: #222C35;
-    display: flex;
-    flex-direction: row;
-    height: 5rem;
-    align-items: center;
-    gap: 1.2rem;
-    padding-left: 1rem;
+.itemPreviewCostText {
+  font-size: 0.8rem;
+  color: #dfc555;
+  font-weight: 1000;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
-.itemPreviewImg{
-    object-fit: cover;
-    width: 5.5rem;
-    border: solid black 1px;
+.itemPreviewOtherInfoDiv {
+  background: linear-gradient(0deg, #10171d 0%, #15222a 100%);
 }
-.itemPreviewName{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bolder;
+.itemPreviewLore {
+  background-color: #0C1316;
+  color: #3D4E5B;
+  padding: 0.5rem;
+  font-style: italic;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.itemPreviewLoreDiv {
+  padding: 0.7rem;
+}
 
-}
-
-.itemPreviewCostDiv{
-    display: flex;
-    flex-direction: row;
-    gap: 0.2rem;
-}
-.itemPreviewCostImg{
-    object-fit: contain;
-    width: 1.2rem;
-}
-.itemPreviewCostText{
-    color: white;
-    font-size: 1rem;
-    color: #DFC555;
-}
-.itemPreviewOtherInfoDiv{
-    background: linear-gradient(0deg, #10171D 0%, #15222A 100%);
-}
-.itemPreviewLore{
-    background-color: #0D1118;
-    color: #474C54;
-    padding: 0.5rem;
-    font-style: italic;
-}
-.itemPreviewLoreDiv{
-    font-style: italic;
-    padding: 0.8rem;
+.itemPreviewHR {
+  padding-top: 0.1rem;
+  border: none;
+  border-bottom: solid 0.15rem #29353B;
+  width: calc(100% - (0.85rem * 2));
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 768px) {
-    .itemPreviewDiv {
-      width: 320px;
-    }
-  
-    .itemPreviewBaseInfo {
-      height: 4.5rem;
-      gap: 1rem;
-    }
-  
-    .itemPreviewImg {
-      width: 4.8rem;
-    }
-  
-    .itemPreviewName {
-      font-size: 1.3rem;
-    }
-  
-    .itemPreviewCostImg {
-      width: 1.1rem;
-    }
-  
-    .itemPreviewCostText {
-      font-size: 0.9rem;
-    }
-  
-    .itemPreviewLore {
-      padding: 0.4rem;
-    }
-  
-    .itemPreviewLoreDiv {
-      padding: 0.7rem;
-    }
+  .itemPreviewDiv {
+    width: 320px;
   }
-  
-  @media (max-width: 480px) {
-    .itemPreviewDiv {
-      width: 100%;
-      max-width: 300px;
-    }
-  
-    .itemPreviewBaseInfo {
-      height: 4rem;
-      gap: 0.8rem;
-      padding-left: 0.8rem;
-    }
-  
-    .itemPreviewImg {
-      width: 4rem;
-    }
-  
-    .itemPreviewName {
-      font-size: 1.1rem;
-    }
-  
-    .itemPreviewCostImg {
-      width: 1rem;
-    }
-  
-    .itemPreviewCostText {
-      font-size: 0.8rem;
-    }
-  
-    .itemPreviewLore {
-      padding: 0.3rem;
-      font-size: 0.9rem;
-    }
-  
-    .itemPreviewLoreDiv {
-      padding: 0.6rem;
-      font-size: 0.9rem;
-    }
+
+  .itemPreviewBaseInfo {
+    height: 4.5rem;
+    gap: 1rem;
   }
-  @media (max-width: 360px) {
-    .itemPreviewDiv {
-      max-width: 180px;
-    }
-  
-    .itemPreviewBaseInfo {
-      height: 3rem;
-      gap: 0.6rem;
-      padding-left: 0.6rem;
-    }
-  
-    .itemPreviewImg {
-      width: 3rem;
-    }
-  
-    .itemPreviewName {
-      font-size: 0.95rem;
-    }
-  
-    .itemPreviewCostImg {
-      width: 0.9rem;
-    }
-  
-    .itemPreviewCostText {
-      font-size: 0.75rem;
-    }
-  
-    .itemPreviewLore {
-      padding: 0.25rem;
-      font-size: 0.8rem;
-    }
-  
-    .itemPreviewLoreDiv {
-      padding: 0.5rem;
-      font-size: 0.8rem;
-    }
+
+  .itemPreviewImg {
+    width: 4.8rem;
   }
-  
+
+  .itemPreviewName {
+    font-size: 1.3rem;
+  }
+
+  .itemPreviewCostImg {
+    width: 1.1rem;
+  }
+
+  .itemPreviewCostText {
+    font-size: 0.9rem;
+  }
+
+  .itemPreviewLore {
+    padding: 0.4rem;
+  }
+
+  .itemPreviewLoreDiv {
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemPreviewDiv {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .itemPreviewBaseInfo {
+    height: 4rem;
+    gap: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  .itemPreviewImg {
+    width: 4rem;
+  }
+
+  .itemPreviewName {
+    font-size: 1.1rem;
+  }
+
+  .itemPreviewCostImg {
+    width: 1rem;
+  }
+
+  .itemPreviewCostText {
+    font-size: 0.8rem;
+  }
+
+  .itemPreviewLore {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .itemPreviewLoreDiv {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 360px) {
+  .itemPreviewDiv {
+    max-width: 180px;
+  }
+
+  .itemPreviewBaseInfo {
+    height: 3rem;
+    gap: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .itemPreviewImg {
+    width: 3rem;
+  }
+
+  .itemPreviewName {
+    font-size: 0.95rem;
+  }
+
+  .itemPreviewCostImg {
+    width: 0.9rem;
+  }
+
+  .itemPreviewCostText {
+    font-size: 0.75rem;
+  }
+
+  .itemPreviewLore {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .itemPreviewLoreDiv {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

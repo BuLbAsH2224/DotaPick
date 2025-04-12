@@ -6,10 +6,15 @@ interface IBaseHpManaProps {
 }
 
 export const BaseHpManaComponent: React.FC<IBaseHpManaProps> = ({ hero }) => {
+
   return (
     <div className="BaseHealthManaDiv">
-        <p className="BaseHeroHealth"><span>{hero.base_health}</span></p>
-        <p className="BaseHeroMana"><span>{hero.base_mana}</span></p>
+      <p className="BaseHeroHealth">
+        <span>{hero.base_health + (hero.base_str * 22)}</span>
+      </p>
+      <p className="BaseHeroMana">
+        <span>{hero.base_mana + (hero.base_int * 12)}</span>
+      </p>
     </div>
   );
 };

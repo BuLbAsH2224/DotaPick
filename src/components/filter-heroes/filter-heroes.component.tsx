@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { IHeroStats, filterButtonType } from "../../types";
+import { IHeroStats} from "../../types";
 import { AttributeChooseButtonComponent } from "./attribute-choose-buttons";
 import { SearchHeroComponent } from "./search-hero";
 import "./filter-heroes.styles.css";
@@ -11,6 +11,8 @@ interface IFilterHeroesProps {
 }
 
 const Attributes: string[] = ["str", "agi", "int", "all"];
+
+type filterButtonType = null | string
 
 export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
   heroes,

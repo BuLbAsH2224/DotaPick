@@ -3,7 +3,7 @@
 }
 .abilityInfoContainer {
   background-color: #11181d;
-  width: 20rem;
+  width: 25rem;
   z-index: 1001;
   display: flex;
   flex-direction: column;

@@ -24,7 +24,7 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   ];
   const [start, setStart] = useState(false);
 
-  const jackpotSound = new Audio("jackpot-sound.mp3");
+  const jackpotSound = new Audio("/src/assets/jackpot-sound.mp3");
   const [prizeIndex,setPrizeIndex] = useState<number>(0)
   
 
@@ -56,7 +56,7 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
         start={start}
         options={{stopInCenter: true}}
         defaultDesignOptions={{ prizesWithText: true}}
-        soundWhileSpinning="revolver-chamber-spin-ratchet-sound-90521.mp3"
+        soundWhileSpinning="/src/assets/revolver-chamber-spin-ratchet-sound-90521.mp3"
         spinningTime={2}
         onPrizeDefined={handlePrizeDefined}
       />

@@ -20,6 +20,9 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
   abilities,
   heroAbilities,
 }) => {
+  const [heroInnateCm, setHeroInnateCm] = useState<IAbility | undefined>(
+    undefined
+  );
   const [heroAbilitiesTalentsInfo, setHeroAbilitiesTalentsInfo] =
     useState<IHeroAbilityData | null>(null);
   const [heroDetailAbilities, setHeroDetailAbilities] = useState<
@@ -27,6 +30,7 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
   >(null);
   useEffect(() => {
     if (!heroAbilities || !heroAbilitiesTalentsInfo || !abilities) return;
+    
     const detailAbilities: IAbility[] = [
       ...heroAbilitiesTalentsInfo.abilities.map(
         (item: string) => abilities[`${item}`]
@@ -35,17 +39,32 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
     setHeroDetailAbilities(detailAbilities);
   }, [heroAbilitiesTalentsInfo, abilities, heroAbilities]);
   useEffect(() => {
+    if (!heroDetailAbilities) return;
+    console.log(heroDetailAbilities)
+    setHeroInnateCm(
+      heroDetailAbilities.find((item: IAbility) => item.is_innate)
+    );
+  }, [heroDetailAbilities]);
+  useEffect(() => {
     if (!heroAbilities) return;
     setHeroAbilitiesTalentsInfo(heroAbilities[`${hero.name}`]);
   }, [heroAbilities, hero]);
   return (
     <>
-  
       <div className="heroAbilitiesContainer">
-        {heroDetailAbilities?.map((item: IAbility, ind) => {
-          if (item.desc)
-            return <AbiltiyPreviewComponent hero={hero} ability={item} key={ind} />;
-        })}
+        {heroInnateCm ? (
+          <AbiltiyPreviewComponent hero={hero} ability={heroInnateCm} />
+        ) : null}
+        {heroDetailAbilities ? (
+          heroDetailAbilities.map((item: IAbility, ind) => {
+            if (item.desc && !item.is_innate)
+              return (
+                <AbiltiyPreviewComponent hero={hero} ability={item} key={ind} />
+              );
+          })
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </>
   );

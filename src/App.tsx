@@ -39,6 +39,7 @@ function App() {
           />
           <Route path="/heroRoulette" element={<HeroRoulettePage heroesStats={heroesStatsData}/>}/>
           <Route path="*" element={<NotFoundPage />} />
+          
         </Routes>
       </div>
       <DefaultFooter />

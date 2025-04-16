@@ -26,13 +26,8 @@ export const AbiltiyPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
       <img
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onError={({ currentTarget }) => {
-          currentTarget.onerror = null;
-          currentTarget.src =
-            "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/innate_icon.png";
-        }}
         className="heroAbilityImg"
-        src={`https://cdn.cloudflare.steamstatic.com${ability.img}`}
+        src={ ability.is_innate ?  "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/innate_icon.png" : `https://cdn.cloudflare.steamstatic.com${ability.img}`}
       />
       <AbilityInfo
         abilityVideoSrc={getAbilityVideo(hero.name,ability.img)}

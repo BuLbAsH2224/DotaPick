@@ -1,0 +1,162 @@
+.itemAbilityDiv_active, .itemAbilityDiv_toggle{
+   padding: 0.8rem;
+}
+.itemAbilityTypeNameDiv_active, .itemAbilityTypeNameDiv_toggle{
+    width: 100%;
+    background: linear-gradient(90deg,   #373B7F 0%, #181E30 100%);
+    padding: 0.4rem;
+    
+}
+.itemAbilityTypeName_active, .itemAbilityTypeName_toggle{
+    color: #9595C6;
+    font-size: 0.9rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 2px #161935;
+}
+.itemAbilityDescDiv_active, .itemAbilityDescDiv_toggle{
+    background-color: #181E30;
+}
+.itemAbilityDesc_active, .itemAbilityDesc_toggle{
+    color: #5D6384;
+    padding: 0.5rem;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.itemAbilityDiv_passive, .itemAbilityDiv_upgrade{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_passive, .itemAbilityTypeNameDiv_upgrade{
+     width: 100%;
+     background: linear-gradient(90deg,   #263540 0%, #1C2630 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_passive,  .itemAbilityTypeName_upgrade{
+     color: #798697;
+     font-size: 0.9rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+ }
+ .itemAbilityDescDiv_passive, .itemAbilityDescDiv_upgrade{
+     background-color: #1C2630;
+ }
+ .itemAbilityDesc_passive, .itemAbilityDesc_upgrade{
+     color: #616B79;
+     padding: 0.5rem;
+     font-size: 0.8rem;
+     font-weight: 900;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+ }
+
+ .itemAbilityDiv_use{
+    padding: 0.8rem;
+ }
+ .itemAbilityTypeNameDiv_use{
+     width: 100%;
+     background: linear-gradient(90deg,   #273F27 0%, #17231F 100%);
+     padding: 0.4rem;
+ }
+ .itemAbilityTypeName_use{
+     color: #93BE79;
+     font-size: 0.9rem;
+     font-weight: bolder;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+ }
+ .itemAbilityDescDiv_use{
+     background-color: #17231F;
+ }
+ .itemAbilityDesc_use{
+     color: #6f816b;
+     padding: 0.5rem;
+     font-weight: 900;
+     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+     font-size: 0.8rem;
+ }
+
+
+
+
+ @media (max-width: 768px) {
+    .itemAbilityDiv_active,
+    .itemAbilityDiv_passive,
+    .itemAbilityDiv_use,
+    .itemAbilityDiv_toggle,
+    .itemAbilityDiv_upgrade {
+      padding: 0.7rem;
+    }
+  
+    .itemAbilityTypeNameDiv_active,
+    .itemAbilityTypeNameDiv_passive,
+    .itemAbilityTypeNameDiv_use,
+    .itemAbilityTypeNameDiv_toggle,
+    .itemAbilityTypeNameDiv_upgrade {
+      padding: 0.35rem;
+    }
+  
+    .itemAbilityTypeName_active,
+    .itemAbilityTypeName_passive,
+    .itemAbilityTypeName_use,
+    .itemAbilityTypeName_toggle,
+    .itemAbilityTypeName_upgrade {
+      font-size: 1.1rem;
+    }
+  
+    .itemAbilityDesc_active,
+    .itemAbilityDesc_passive,
+    .itemAbilityDesc_use,
+    .itemAbilityDesc_toggle,
+    .itemAbilityDesc_upgrade {
+      padding: 0.45rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .itemAbilityDiv_active,
+    .itemAbilityDiv_passive,
+    .itemAbilityDiv_use,
+    .itemAbilityDiv_toggle,
+    .itemAbilityDiv_upgrade {
+      padding: 0.6rem;
+    }
+  
+    .itemAbilityTypeNameDiv_active,
+    .itemAbilityTypeNameDiv_passive,
+    .itemAbilityTypeNameDiv_use,
+    .itemAbilityTypeNameDiv_toggle,
+    .itemAbilityTypeNameDiv_upgrade {
+      padding: 0.3rem;
+    }
+  
+    .itemAbilityTypeName_active,
+    .itemAbilityTypeName_passive,
+    .itemAbilityTypeName_use,
+    .itemAbilityTypeName_toggle,
+    .itemAbilityTypeName_upgrade {
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  
+    .itemAbilityDesc_active,
+    .itemAbilityDesc_passive,
+    .itemAbilityDesc_use,
+    .itemAbilityDesc_toggle,
+    .itemAbilityDesc_upgrade {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 360px) {
+    .itemAttrText,
+    .itemAttrValueText {
+      font-size: 0.8rem;
+    }
+  
+    .itemAttrValueText {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+    }
+  }
+  

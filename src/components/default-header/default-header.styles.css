@@ -1,0 +1,58 @@
+.defaultHeaderMain {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 5rem;
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.homeIcon {
+  object-fit: contain;
+  width: 3rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  filter: invert();
+}
+
+.homeIcon:hover {
+  transform: scale(1.1);
+}
+.headerLinkToRoulette {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 1px#000000;
+  transition: 0.2s;
+}
+.headerLinkToRoulette:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .defaultHeaderMain {
+    height: 3.5rem;
+    padding: 0 0.7rem;
+  }
+
+  .homeIcon {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .defaultHeaderMain {
+    height: 3rem;
+    padding: 0 0.5rem;
+  }
+
+  .homeIcon {
+    width: 2rem;
+  }
+}

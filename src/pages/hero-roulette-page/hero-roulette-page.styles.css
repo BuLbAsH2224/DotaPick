@@ -1,0 +1,16 @@
+.rouletteHeader{
+    color: white;
+    font-size: 4rem;
+    text-shadow: 3px 3px 1px#000000;
+}
+.rouletteHeaderText{
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px#000000;
+}
+.rouletteHeaderContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

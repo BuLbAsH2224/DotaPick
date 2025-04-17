@@ -1,0 +1,30 @@
+.pudgeHookImg{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    z-index: 2;
+    animation: slideInHook 1s linear forwards;
+}
+
+@keyframes slideInHook {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pudgeHookImg {
+      top: 25%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pudgeHookImg {
+      height: 20%;
+      top: 20%;
+    }
+  }
+  

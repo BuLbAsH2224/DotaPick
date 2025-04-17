@@ -1,0 +1,135 @@
+.heroFullNameAndAttrDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 0.1rem solid white;
+  gap: 0.5rem;
+}
+.heroFullNameAndAttrDiv p {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-shadow: 2px 2px 1px#000000;
+}
+.heroFullInfoAndVideoDiv {
+  width: 32rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(205, 221, 255, 0.1);
+  border-radius: 1rem;
+  transition: transform 0.5s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.heroFullInfoAndVideoDiv:hover {
+  transition: transform 0.5s;
+  transform: scale(1.1,1.1);
+}
+.heroFullVideo {
+  object-fit: contain;
+  width: 32rem;
+  height: 30rem;
+}
+.heroAttrFromNameAndVideo {
+  object-fit: contain;
+  width: 3.5rem;
+  filter: drop-shadow(1.5px 1.5px 0px black);
+}
+
+.heroAttr_all {
+  box-shadow: 3px 3px 0.5rem #ec1506, -3px 0px 0.5rem #00d9ec,
+    0px -3px 0.5rem #26e030;
+ 
+}
+.heroAttr_int {
+  box-shadow: 0px 0px 0.5rem #00d9ec;
+}
+.heroAttr_str {
+  box-shadow: 0px 0px 0.5rem #ec1506;
+}
+.heroAttr_agi {
+  box-shadow: 0px 0px 0.5rem #26e030;
+}
+@media (max-width: 1200px) {
+  .heroFullInfoAndVideoDiv {
+    width: 28rem;
+  }
+
+  .heroFullVideo {
+    width: 28rem;
+    height: 26rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroFullInfoAndVideoDiv {
+    width: 24rem;
+  }
+
+  .heroFullVideo {
+    width: 24rem;
+    height: 22rem;
+  }
+
+  .heroFullNameAndAttrDiv p {
+    font-size: 2rem;
+  }
+
+  .heroAttrFromNameAndVideo {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroFullInfoAndVideoDiv {
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  .heroFullVideo {
+    width: 100%;
+    max-width: 20rem;
+    height: 18rem;
+  }
+
+  .heroFullNameAndAttrDiv p {
+    font-size: 1.7rem;
+  }
+
+  .heroAttrFromNameAndVideo {
+    width: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroFullNameAndAttrDiv {
+    
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .heroFullInfoAndVideoDiv {
+    max-width: 100%;
+   
+  }
+
+  .heroFullVideo {
+    max-width: 100%;
+    height: 15rem;
+  }
+
+  .heroFullNameAndAttrDiv p {
+    font-size: 1.4rem;
+  }
+
+  .heroAttrFromNameAndVideo {
+    width: 2rem;
+  }
+
+  .heroFullInfoAndVideoDiv:hover {
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,79 @@
+.heroPreviewsDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 1rem;
+  height: 100%;
+}
+
+.int{
+  text-align: center;
+  width: 70rem;
+  font-size: 2rem;
+  color:grey ;
+}
+#hero_pick{
+  height: 100px;
+  font-size: 4rem;
+  color:white ;
+
+}
+.mainPageAboutTextDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 1px#000000;
+}
+p.HeroesNotFound{
+  color: white;
+  font-size: 5rem;
+  text-shadow: 3px 3px 1px#000000;
+}
+.LoadingHeroesText{
+  font-size: 6rem;
+  color: white;
+  text-shadow: 3px 3px 1px#000000;
+}
+
+@media (max-width: 768px) {
+  .int {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+
+  #hero_pick {
+    height: 80px;
+    font-size: 3rem;
+  }
+
+  p.HeroesNotFound {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroPreviewsDiv {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .int {
+    font-size: 1.2rem;
+  }
+
+  #hero_pick {
+    height: 60px;
+    font-size: 2.5rem;
+  }
+
+  p.HeroesNotFound {
+    font-size: 2.5rem;
+  }
+}
+
+

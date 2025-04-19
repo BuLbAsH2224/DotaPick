@@ -5,7 +5,7 @@ import React from "react"
 export const DefaultHeader : React.FC = () => {
   return (
     <header className="defaultHeaderMain">
-        <Link to="/"><img src={homeIcon} className="homeIcon" /></Link>
+        <Link to="/" className="linkToHome"><img src={homeIcon} className="homeIcon" /></Link>
         <Link className='headerLinkToRoulette' to="/heroRoulette">Рулетка героев</Link>
     </header>
   )

@@ -21,17 +21,18 @@
 
 
 * {
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Reaver', sans-serif; 
+ 
 }
 
 
 html {
   height: auto;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -64,22 +65,27 @@ body {
 }
 
 
-@media (max-width: 960px) {
+.mainContent {
+  padding: 0.3rem;
+}
+.loadingText {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+}
+
+@media (min-width: 30em) {
   .mainContent {
     padding: 0.5rem;
   }
-
   .loadingText {
-    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 60em) {
   .mainContent {
-    padding: 0.3rem;
+    padding: 1rem;
   }
-
   .loadingText {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }

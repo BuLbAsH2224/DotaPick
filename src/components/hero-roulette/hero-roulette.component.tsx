@@ -4,7 +4,7 @@ import "./hero-roulette.styles.css";
 import "react-roulette-pro/dist/index.css";
 import RoulettePro from "react-roulette-pro";
 import { getHeroImageUrlFromName } from "../../utils";
-import { HeroPreviewComponent } from "../hero-preview";
+import { Link } from "react-router-dom";
 
 interface IHeroRouletteProps {
   heroes: IHeroStats[];
@@ -29,7 +29,7 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   
 
   const handleStart = () => {
-    setPrizeIndex(Math.floor(Math.random() * heroes.length))
+    setPrizeIndex(Math.floor((Math.random() * heroes.length)))
     setStart(true);
   };
 
@@ -47,16 +47,16 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   return (
     <>
       <div className="rouletteHeroPreview" style={{ visibility: !renderPreview ? "hidden" : "visible"}}>
-        <HeroPreviewComponent hero={heroes[prizeIndex]} />
+        <Link to={`/singleHero/${heroes[prizeIndex].id}`}><img src={`${getHeroImageUrlFromName(heroes[prizeIndex].name)}`} alt="hero img" /></Link>
         <button onClick={handleOnClickClose}>Закрыть</button>
       </div>
       <RoulettePro
-        prizes={[...heroPrizes, ...heroPrizes.slice(heroPrizes.length - 20)]}
+        prizes={[...heroPrizes,...heroPrizes.slice(heroPrizes.length - 20)]}
         prizeIndex={prizeIndex}
         start={start}
         options={{stopInCenter: true}}
         defaultDesignOptions={{ prizesWithText: true}}
-        soundWhileSpinning="revolver-chamber-spin-ratchet-sound-90521.mp3"
+        soundWhileSpinning="roulette-spin.mp3"
         spinningTime={2}
         onPrizeDefined={handlePrizeDefined}
       />

@@ -30,43 +30,46 @@
 .itemAttrDiv{
     padding: 1rem;
 }
-@media (max-width: 768px) {
-  .itemPreviewTargetText,
-  .itemPreviewDispellableText {
-    font-size: 0.95rem;
+@media (max-width: 48em) {
+  .itemPreviewTargetText {
+    font-size: 0.7rem;
   }
-
   .itemPreviewTargets,
   .itemPreviewDispellableInfo {
-    font-size: 0.95rem;
-    padding-left: 0.25rem;
-  }
-
-  .itemBaseInfo,
-  .itemAttrDiv {
-    padding: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .itemPreviewTargetText,
-  .itemPreviewDispellableText {
-    font-size: 0.9rem;
-  }
-
-  .itemPreviewTargets,
-  .itemPreviewDispellableInfo {
-    font-size: 0.8rem;
     padding-left: 0.2rem;
   }
-
-  .itemBaseInfo,
+  .itemPreviewDispellableText {
+    font-size: 0.7rem;
+  }
+  .itemBaseInfo {
+    padding: 0.8rem;
+  }
+  .itemBaseInfoAndAttrHR {
+    width: calc(100% - (0.7rem * 2));
+  }
   .itemAttrDiv {
     padding: 0.8rem;
   }
+}
 
+@media (max-width: 30em) {
+  .itemPreviewTargetText {
+    font-size: 0.6rem;
+  }
+  .itemPreviewTargets,
+  .itemPreviewDispellableInfo {
+    padding-left: 0.1rem;
+  }
+  .itemPreviewDispellableText {
+    font-size: 0.6rem;
+  }
+  .itemBaseInfo {
+    padding: 0.6rem;
+  }
   .itemBaseInfoAndAttrHR {
-    width: calc(100% - (0.7rem * 2));
-    border-width: 0.08rem;
+    width: calc(100% - (0.5rem * 2));
+  }
+  .itemAttrDiv {
+    padding: 0.6rem;
   }
 }

@@ -8,7 +8,7 @@ interface IMainPageProps{
 }
 
 const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
-  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>(heroesStats ? heroesStats : []);
+  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>(heroesStats ? heroesStats.sort((a : IHeroStats, b : IHeroStats) => a.localized_name.toLocaleLowerCase() > b.localized_name.toLocaleLowerCase() ? 1 : -1) : []);
   return (
     <>
       <div className="mainPageAboutTextDiv">

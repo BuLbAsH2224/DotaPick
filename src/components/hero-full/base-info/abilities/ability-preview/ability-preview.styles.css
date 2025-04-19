@@ -1,12 +1,38 @@
-.heroAbilityImg {
-  object-fit: cover;
-  width: 7rem;
+.heroAbilityImgContainer,.heroAbilityImgContainerPassive{
   border-radius: 1rem;
-  filter: drop-shadow(3px 3px 2px black);
-  transition: 0.3s;
-  cursor: help;
+  width: 7rem;
+  height: 7rem;
 }
-.heroAbilityImg:hover {
+.heroAbilityImgContainerPassive{
+  box-shadow: inset 0 0 6px 5px rgb(0,0,0);
+}
+
+.heroAbilityImgContainer {
+  filter: drop-shadow(3px 3px 2px black);
+}
+.heroAbilityImgContainerPassive:hover{
   transition: 0.3s;
-  filter: drop-shadow(1px 1px 10px rgb(255, 255, 255));
+  box-shadow: inset 0 0 10px 8px rgb(0,0,0);
+  filter:drop-shadow(1px 1px 10px rgb(255, 255, 255)) brightness(1.1);
+}
+.heroAbilityImgContainer:hover{
+  transition: 0.3s;
+  filter: drop-shadow(1px 1px 10px rgb(255, 255, 255)) brightness(1.1);
+}
+@media (max-width: 48em) {
+  .heroAbilityImgContainer,
+  .heroAbilityImgContainerPassive {
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 0.8rem;
+  }
+}
+
+@media (max-width: 30em) {
+  .heroAbilityImgContainer,
+  .heroAbilityImgContainerPassive {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 0.6rem;
+  }
 }

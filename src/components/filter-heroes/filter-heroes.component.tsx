@@ -29,7 +29,7 @@ export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
 
   useEffect(() => {
     if (!heroes) return
-      const filtereds = {heroFiltereds: heroes}
+      const filtereds = {heroFiltereds: heroes.sort((a : IHeroStats, b : IHeroStats) => a.localized_name.toLocaleLowerCase() > b.localized_name.toLocaleLowerCase() ? 1 : -1)}
     
     if (Attr) {
       filtereds.heroFiltereds = filtereds.heroFiltereds.filter(item => item.primary_attr === Attr);

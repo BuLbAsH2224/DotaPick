@@ -4,7 +4,7 @@ import "./ability-info.styles.css";
 interface IAbilityInfoComponent {
   styles: React.CSSProperties | undefined;
   ability: IAbility;
-  abilityVideoSrc: string | undefined;
+  abilityVideoSrc?: string;
 }
 
 export const AbilityInfo: React.FC<IAbilityInfoComponent> = ({
@@ -13,7 +13,7 @@ export const AbilityInfo: React.FC<IAbilityInfoComponent> = ({
   styles,
 }) => {
   return (
-    <div className="abilityInfoContainer" style={styles}>
+    <div className='abilityInfoContainer' style={styles}>
   
       <p className="abilityInfoName">
         <span>{ability.dname.toUpperCase()}</span>

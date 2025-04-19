@@ -13,17 +13,39 @@
 }
 
 .homeIcon {
-  object-fit: contain;
   width: 3rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: 0.2s;
   filter: invert();
 }
 
-.homeIcon:hover {
-  transform: scale(1.1);
+.linkToHome{
+  position: relative;
 }
+.linkToHome::after{
+  content: "";
+  height: 14px;
+  width: 0px;
+  position: absolute;
+  transition: all 0.6s;
+}
+
+
+.linkToHome::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #ffffff;
+
+}
+
+.linkToHome:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: width .3s ease;
+}
+
 .headerLinkToRoulette {
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -31,9 +53,26 @@
   text-shadow: 2px 2px 1px#000000;
   transition: 0.2s;
 }
-.headerLinkToRoulette:hover {
-  transition: 0.3s;
-  transform: scale(1.1);
+.headerLinkToRoulette::after{
+  content: "";
+  height: 14px;
+  width: 0px;
+  position: absolute;
+  transition: all 0.6s;
+}
+
+
+.headerLinkToRoulette::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #ffffff;
+
+}
+
+.headerLinkToRoulette:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: width .3s ease;
 }
 @media (max-width: 768px) {
   .defaultHeaderMain {

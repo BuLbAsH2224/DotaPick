@@ -40,7 +40,6 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
   }, [heroAbilitiesTalentsInfo, abilities, heroAbilities]);
   useEffect(() => {
     if (!heroDetailAbilities) return;
-    console.log(heroDetailAbilities)
     setHeroInnateCm(
       heroDetailAbilities.find((item: IAbility) => item.is_innate)
     );

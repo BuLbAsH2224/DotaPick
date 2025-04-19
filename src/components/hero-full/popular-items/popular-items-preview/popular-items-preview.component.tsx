@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./popular-items-preview.styles.css";
 import { IItem } from "../../../../types";
 import { ItemPreviewComponent } from "../../../item-preview";
@@ -38,18 +38,7 @@ export const PopularItemsPreviewComponent: React.FC<
     setDisplayItemInfo(true);
     setPosition(newComponentPos);
   };
-  
-  useEffect(() => {
-    const handleWindowScroll = () => {
-      setDisplayItemInfo(false);
-    };
 
-    window.addEventListener("scroll", handleWindowScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleWindowScroll);
-    };
-  }, []);
   const handleMouseLeave = () => {
     setDisplayItemInfo(false);
   };

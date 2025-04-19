@@ -13,43 +13,24 @@
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   font-weight: 800;
 }
-@media (max-width: 768px) {
+@media (max-width: 48em) {
   .itemAttrText,
   .itemAttrValueText {
-    font-size: 0.95rem;
+    font-size: 0.7rem;
   }
-}
-
-@media (max-width: 480px) {
-  .itemAttrText,
-  .itemAttrValueText {
-    font-size: 0.9rem;
-  }
-
   .itemAttrValueText {
     padding-left: 0.15rem;
     padding-right: 0.15rem;
   }
 }
-@media (max-width: 360px) {
-  .itemPreviewTargetText,
-  .itemPreviewDispellableText {
-    font-size: 0.8rem;
-  }
 
-  .itemPreviewTargets,
-  .itemPreviewDispellableInfo {
-    font-size: 0.8rem;
-    padding-left: 0.15rem;
+@media (max-width: 30em) {
+  .itemAttrText,
+  .itemAttrValueText {
+    font-size: 0.6rem;
   }
-
-  .itemBaseInfo,
-  .itemAttrDiv {
-    padding: 0.6rem;
-  }
-
-  .itemBaseInfoAndAttrHR {
-    width: calc(100% - (0.5rem * 2));
-    border-width: 0.05rem;
+  .itemAttrValueText {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
   }
 }

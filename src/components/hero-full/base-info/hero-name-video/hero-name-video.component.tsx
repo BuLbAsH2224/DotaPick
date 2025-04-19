@@ -14,11 +14,11 @@ export const HeroNameVideoComponent: React.FC<IHeroNameVideoProps> = ({
   return (
     <div className={`heroFullInfoAndVideoDiv heroAttr_${hero.primary_attr}`}>
       <div className="heroFullNameAndAttrDiv">
-      <img
-        src={getHeroAttributeImage(hero.primary_attr)}
-        className="heroAttrFromNameAndVideo"
-        alt="hero attr"
-      />
+        <img
+          src={getHeroAttributeImage(hero.primary_attr)}
+          className="heroAttrFromNameAndVideo"
+          alt="hero attr"
+        />
         <p>{hero.localized_name}</p>
       </div>
       <video autoPlay loop muted playsInline className="heroFullVideo">

@@ -21,7 +21,9 @@ const SingleHeroPage: React.FC<ISingleHeroPageProps> = ({
 }) => {
   const { id } = useParams<{ id: string }>();
   const [heroStats, setHeroStats] = useState<IHeroStats | null>(null);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
   useEffect(() => {
     if (!id || !heroesStats) return;
     const hero = getOneHeroWithId(heroesStats, parseInt(id));

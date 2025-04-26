@@ -13,6 +13,7 @@ import "./hero-full.styles.css";
 import { useQuery } from "@tanstack/react-query";
 import { getHeroPopularItems } from "../../api";
 import { PopularItemsComponent } from "./popular-items";
+import { Loader } from "../loader";
 interface IHeroFullProps {
   hero: IHeroStats;
   items: IItems | undefined;
@@ -26,9 +27,7 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
   abilitiesData,
   heroAbilitiesData,
 }) => {
-  useEffect(() => {
-    window.scrollTo({ top: 0 });
-  }, []);
+
 
   const [popularItems, setPopularItems] = useState<IHeroPopularItems | null>(
     null
@@ -67,7 +66,7 @@ export const HeroFullComponent: React.FC<IHeroFullProps> = ({
       {popularItems ? (
         <PopularItemsComponent popularItems={popularItems} />
       ) : (
-        <p className="loadingText">Loading..</p>
+        <Loader/>
       )}
     </div>
   );

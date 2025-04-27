@@ -2,6 +2,7 @@
   border-radius: 1rem;
   width: 7rem;
   height: 7rem;
+  position: relative;
 }
 .heroAbilityImgContainerPassive{
   box-shadow: inset 0 0 6px 5px rgb(0,0,0);

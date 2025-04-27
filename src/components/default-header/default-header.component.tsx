@@ -4,9 +4,9 @@ import homeIcon from "../../assets/home.icon.png"
 import React from "react"
 export const DefaultHeader : React.FC = () => {
   return (
-    <header className="defaultHeaderMain">
+    <nav className="defaultHeaderMain">
         <Link to="/" className="linkToHome"><img src={homeIcon} className="homeIcon" /></Link>
         <Link className='headerLinkToRoulette' to="/heroRoulette">Рулетка героев</Link>
-    </header>
+    </nav>
   )
 }

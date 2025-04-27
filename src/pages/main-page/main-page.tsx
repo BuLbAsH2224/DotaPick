@@ -1,6 +1,6 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { IHeroStats } from "../../types";
-import { FilterHeroesComponent, HeroPreviewComponent } from "../../components";
+import { FilterHeroesComponent, HeroPreviewComponent, Loader } from "../../components";
 import "./main-page.styles.css";
 
 interface IMainPageProps{
@@ -9,6 +9,7 @@ interface IMainPageProps{
 
 const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
   const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>(heroesStats ? heroesStats.sort((a : IHeroStats, b : IHeroStats) => a.localized_name.toLocaleLowerCase() > b.localized_name.toLocaleLowerCase() ? 1 : -1) : []);
+ 
   return (
     <>
       <div className="mainPageAboutTextDiv">
@@ -23,7 +24,7 @@ const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
       <FilterHeroesComponent heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
       <div className="heroPreviewsDiv">
         {
-          !heroesStats ?  <h1 className="LoadingHeroesText">Loading</h1> :
+          !heroesStats ? <Loader/> :
           filteredHeroesStats.length ?  filteredHeroesStats.map((item) => {
             return <HeroPreviewComponent hero={item}  key={item.id}/>;
           }) : <p className="HeroesNotFound">Герои не найдены!</p>

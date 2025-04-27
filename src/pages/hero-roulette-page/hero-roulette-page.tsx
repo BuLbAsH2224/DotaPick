@@ -1,4 +1,4 @@
-import { HeroRouletteComponent } from "../../components";
+import { HeroRouletteComponent, Loader } from "../../components";
 import { IHeroStats } from "../../types";
 import "./hero-roulette-page.styles.css";
 
@@ -20,7 +20,7 @@ const HeroRoulettePage: React.FC<IHeroRoulettePageProps> = ({
       {heroesStats ? (
         <HeroRouletteComponent heroes={heroesStats} />
       ) : (
-        <p>Loading...</p>
+        <Loader/>
       )}
     </>
   );

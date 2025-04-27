@@ -8,6 +8,7 @@ import {
 } from "../../../../types";
 import "./abilities.styles.css";
 import { AbiltiyPreviewComponent } from "./ability-preview";
+import { Loader } from "../../../loader";
 
 interface IAbiltiesProps {
   hero: IHeroStats;
@@ -62,7 +63,7 @@ export const AbiltiesComponent: React.FC<IAbiltiesProps> = ({
               );
           })
         ) : (
-          <p>Loading...</p>
+          <Loader/>
         )}
       </div>
     </>

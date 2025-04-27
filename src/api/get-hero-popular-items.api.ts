@@ -1,7 +1,8 @@
 import axios from "axios";
-import { IHeroPopularItemsID } from "../types";
+import { IHeroPopularItems } from "../types";
+import { apiURL } from "../config";
 
-export const getHeroPopularItems = async (id : number): Promise<IHeroPopularItemsID> => {
-    const res = await axios.get(`https://api.opendota.com/api/heroes/${id}/itemPopularity`);
+export const getHeroPopularItems = async (id : number): Promise<IHeroPopularItems> => {
+    const res = await axios.post(`${apiURL}/getHeroPopularItems`,{id});
     return res.data;
 };

@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { IHeroStats } from "../../types";
+import { HeroPreviews, IHeroPreview } from "../../types";
 import { AttributeChooseButtonComponent } from "./attribute-choose-buttons";
 import { SearchHeroComponent } from "./search-hero";
 import "./filter-heroes.styles.css";
 
 interface IFilterHeroesProps {
-  StateFunc: React.Dispatch<React.SetStateAction<IHeroStats[]>>;
-  heroes: IHeroStats[] | undefined;
+  StateFunc: React.Dispatch<React.SetStateAction<HeroPreviews>>;
+  heroesPreview: HeroPreviews | undefined;
 }
 
 const Attributes: string[] = ["str", "agi", "int", "all"];
@@ -15,7 +15,7 @@ const Attributes: string[] = ["str", "agi", "int", "all"];
 type filterButtonType = null | string;
 
 export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
-  heroes,
+  heroesPreview,
   StateFunc,
 }) => {
   const [Attr, setAttr] = useState<filterButtonType>(null);
@@ -27,9 +27,9 @@ export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
   };
 
   useEffect(() => {
-    if (!heroes) return;
+    if (!heroesPreview) return;
     const filtereds = {
-      heroFiltereds: heroes.sort((a: IHeroStats, b: IHeroStats) =>
+      heroFiltereds: heroesPreview.sort((a: IHeroPreview, b: IHeroPreview) =>
         a.localized_name.toLocaleLowerCase() >
         b.localized_name.toLocaleLowerCase()
           ? 1
@@ -49,7 +49,7 @@ export const FilterHeroesComponent: React.FC<IFilterHeroesProps> = ({
     }
 
     StateFunc(filtereds.heroFiltereds);
-  }, [StateFunc, Attr, SearchValue, heroes]);
+  }, [StateFunc, Attr, SearchValue, heroesPreview]);
   return (
     <div className="FiltersAndFoundDiv">
       <div>

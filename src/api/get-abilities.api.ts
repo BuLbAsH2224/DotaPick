@@ -1,7 +1,8 @@
 import axios from "axios";
-import {IHeroAbilities } from "../types";
+import {IAbilityFromApi } from "../types";
+import { apiURL } from "../config";
 
-export const getHeroAbilities = async (): Promise<IHeroAbilities> => {
-    const res = await axios.get(`https://api.opendota.com/api/constants/hero_abilities`);
+export const getHeroAbilities = async (heroName : string): Promise<IAbilityFromApi> => {
+    const res = await axios.post(`${apiURL}/getHeroAbilities`,{heroName});
     return res.data;
 };

@@ -1,15 +1,23 @@
-import {  useState } from "react";
-import { IHeroStats } from "../../types";
-import { FilterHeroesComponent, HeroPreviewComponent, Loader } from "../../components";
+import { useState } from "react";
+import { HeroPreviews, IHeroPreview } from "../../types";
+import {
+  FilterHeroesComponent,
+  HeroPreviewComponent,
+  Loader,
+} from "../../components";
 import "./main-page.styles.css";
+import { getHeroesPreviewAPI } from "../../api";
+import { useQuery } from "@tanstack/react-query";
 
-interface IMainPageProps{
-  heroesStats: IHeroStats[] | undefined;
-}
+const MainPage: React.FC = () => {
+  const { data: heroesPreviewData } = useQuery<HeroPreviews>({
+    queryKey: ["heroesStats"],
+    queryFn: getHeroesPreviewAPI,
+  });
+  const [filteredHeroesStats, setFilteredHeroesStats] = useState<HeroPreviews>(
+    []
+  );
 
-const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
-  const [filteredHeroesStats, setFilteredHeroesStats] = useState<IHeroStats[]>(heroesStats ? heroesStats.sort((a : IHeroStats, b : IHeroStats) => a.localized_name.toLocaleLowerCase() > b.localized_name.toLocaleLowerCase() ? 1 : -1) : []);
- 
   return (
     <>
       <div className="mainPageAboutTextDiv">
@@ -21,15 +29,20 @@ const MainPage : React.FC<IMainPageProps> = ({ heroesStats }) => {
           вас к победе.
         </p>
       </div>
-      <FilterHeroesComponent heroes={heroesStats} StateFunc={setFilteredHeroesStats} />
+      <FilterHeroesComponent
+        heroesPreview={heroesPreviewData}
+        StateFunc={setFilteredHeroesStats}
+      />
       <div className="heroPreviewsDiv">
-        {
-          !heroesStats ? <Loader/> :
-          filteredHeroesStats.length ?  filteredHeroesStats.map((item) => {
-            return <HeroPreviewComponent hero={item}  key={item.id}/>;
-          }) : <p className="HeroesNotFound">Герои не найдены!</p>
-          
-        }
+        {!heroesPreviewData ? (
+          <Loader />
+        ) : filteredHeroesStats.length ? (
+          filteredHeroesStats.map((item: IHeroPreview) => {
+            return <HeroPreviewComponent heroPreview={item} key={item.id} />;
+          })
+        ) : (
+          <p className="HeroesNotFound">Герои не найдены!</p>
+        )}
       </div>
     </>
   );

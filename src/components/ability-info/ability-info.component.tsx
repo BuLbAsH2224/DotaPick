@@ -4,28 +4,32 @@ import "./ability-info.styles.css";
 interface IAbilityInfoComponent {
   styles: React.CSSProperties | undefined;
   ability: IAbility;
-  abilityVideoSrc?: string;
 }
 
 export const AbilityInfo: React.FC<IAbilityInfoComponent> = ({
   ability,
-  abilityVideoSrc,
   styles,
 }) => {
   return (
-    <div className='abilityInfoContainer' style={styles}>
-  
+    <div className="abilityInfoContainer" style={styles}>
       <p className="abilityInfoName">
         <span>{ability.dname.toUpperCase()}</span>
       </p>
-      {abilityVideoSrc ? (
-        <video autoPlay loop muted playsInline className="abilityInfoVideo"  onError={({ currentTarget }) => {
+
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="abilityInfoVideo"
+        onError={({ currentTarget }) => {
           currentTarget.onerror = null;
-          currentTarget.style.display = "none"}}
-          >
-          <source src={abilityVideoSrc} type="video/mp4" />
-        </video>
-      ) : null}
+          currentTarget.style.display = "none";
+        }}
+      >
+        <source src={ability.videoSRC} type="video/mp4" />
+      </video>
+
       <hr className="abilityInfoHR" />
       <div className="abilityInfoBaseContainer">
         {ability.behavior ? (

@@ -1,14 +1,14 @@
+import { useQuery } from "@tanstack/react-query";
+import { getHeroesPreviewAPI } from "../../api";
 import { HeroRouletteComponent, Loader } from "../../components";
-import { IHeroStats } from "../../types";
+import { HeroPreviews } from "../../types";
 import "./hero-roulette-page.styles.css";
 
-interface IHeroRoulettePageProps {
-  heroesStats: IHeroStats[] | undefined;
-}
-
-const HeroRoulettePage: React.FC<IHeroRoulettePageProps> = ({
-  heroesStats,
-}) => {
+const HeroRoulettePage: React.FC = () => {
+  const { data: heroesPreviewData } = useQuery<HeroPreviews>({
+    queryKey: ["heroesStats"],
+    queryFn: getHeroesPreviewAPI,
+  });
   return (
     <>
       <div className="rouletteHeaderContainer">
@@ -17,10 +17,10 @@ const HeroRoulettePage: React.FC<IHeroRoulettePageProps> = ({
           Рулетка героев - поможет выбрать вам персонажа
         </p>
       </div>
-      {heroesStats ? (
-        <HeroRouletteComponent heroes={heroesStats} />
+      {heroesPreviewData ? (
+        <HeroRouletteComponent heroes={heroesPreviewData} />
       ) : (
-        <Loader/>
+        <Loader />
       )}
     </>
   );

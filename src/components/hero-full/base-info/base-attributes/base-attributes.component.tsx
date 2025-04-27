@@ -10,7 +10,6 @@ interface IBaseAttributesProps {
 export const BaseAttributesComponent: React.FC<IBaseAttributesProps> = ({
   hero,
 }) => {
-  console.log(hero)
   return (
     <div className="BaseAttributesHeaderDiv">
       <div className="BaseAttributesDiv">

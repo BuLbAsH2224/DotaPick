@@ -1,0 +1,1 @@
+export const apiURL = 'http://bulbashdota.eu-4.evennode.com'

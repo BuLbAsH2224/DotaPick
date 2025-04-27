@@ -1,22 +1,31 @@
 import React from "react";
-import { IHeroStats } from "../../types";
+import { IHeroPreview } from "../../types";
 import "./hero-preview.styles.css";
 import { Link } from "react-router-dom";
-import { getHeroAttributeImage, getHeroImageUrlFromName } from "../../utils";
+import { getHeroAttributeImage } from "../../utils";
 
 interface IHeroPreviewProps {
-  hero:  IHeroStats;
+  heroPreview: IHeroPreview;
 }
 
-export const HeroPreviewComponent: React.FC<IHeroPreviewProps> = ({ hero }) => {
+export const HeroPreviewComponent: React.FC<IHeroPreviewProps> = ({
+  heroPreview,
+}) => {
   return (
-    <Link to={`/singleHero/${hero.id}` } >
-      <div className={`heroPreviewDiv heroPreviewDiv_${hero.primary_attr}`} >
-        <img
-          src={getHeroImageUrlFromName(hero.name)}
-          className="heroPreviewImg"
-        />
-        <p className="heroPreviewName"> <img src={getHeroAttributeImage(hero.primary_attr)} alt={hero.primary_attr} className="heroPreviewAttributeImage" />{hero.localized_name}</p>
+    <Link to={`/singleHero/${heroPreview.id}`}>
+      <div
+        className={`heroPreviewDiv heroPreviewDiv_${heroPreview.primary_attr}`}
+      >
+        <img src={heroPreview.img} className="heroPreviewImg" />
+        <p className="heroPreviewName">
+          {" "}
+          <img
+            src={getHeroAttributeImage(heroPreview.primary_attr)}
+            alt={heroPreview.primary_attr}
+            className="heroPreviewAttributeImage"
+          />
+          {heroPreview.localized_name}
+        </p>
       </div>
     </Link>
   );

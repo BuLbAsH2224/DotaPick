@@ -1,7 +1,8 @@
 import axios from "axios";
-import { IHeroStats } from "../types";
+import { HeroPreviews } from "../types";
+import { apiURL } from "../config";
 
-export const getHeroesStatsAPI = async (): Promise<IHeroStats[]> => {
-    const res = await axios.get("https://api.opendota.com/api/heroStats");
+export const getHeroesPreviewAPI = async (): Promise<HeroPreviews> => {
+    const res = await axios.get(`${apiURL}/getHeroesPreviewInfo`);
     return res.data;
 };

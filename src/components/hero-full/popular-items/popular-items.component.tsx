@@ -9,7 +9,7 @@ interface IPopularItemsProps {
 export const PopularItemsComponent: React.FC<IPopularItemsProps> = ({
   popularItems,
 }) => {
-  
+ 
   return (
     <div className="itemsPreviewDiv">
       <div className="popularItemsDiv">

@@ -1,1 +1,1 @@
-export const apiURL = 'http://localhost:5000'
+export const apiURL = 'http://bulbashdota.eu-4.evennode.com'

@@ -1,16 +1,19 @@
 import { useState } from "react";
-import { IAbility } from "../../../../../types";
+import { IAbility, IAghsDesc } from "../../../../../types";
 import "./ability-preview.styles.css";
 import { AbilityInfo } from "../../../../ability-info";
 
 interface IAbiltiyPreviewProps {
   ability: IAbility;
+  aghsAndShard: IAghsDesc
 }
 
 export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
-  ability,
+  ability,aghsAndShard
 }) => {
   const [visible, setVisible] = useState<boolean>(false);
+  const isShard : string = (aghsAndShard.has_shard && ability.dname === aghsAndShard.shard_skill_name && aghsAndShard.shard_new_skill) || ability.is_shard  ? "heroAbilityShard" : ""
+  const isAghs : string = (aghsAndShard.has_scepter && ability.dname === aghsAndShard.scepter_skill_name && aghsAndShard.scepter_new_skill)  || ability.is_aghs ? "heroAbilityAghs" : ""
   const handleMouseEnter: React.MouseEventHandler<HTMLImageElement> = () => {
     setVisible(true);
   };
@@ -26,8 +29,8 @@ export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
         className={
           !ability.is_innate &&
           String(ability.behavior).toLowerCase() === "passive"
-            ? "heroAbilityImgContainerPassive"
-            : "heroAbilityImgContainer"
+            ? `heroAbilityImgContainerPassive ${isShard} ${isAghs}`
+            : `heroAbilityImgContainer ${isShard} ${isAghs}`
         }
         style={{
           backgroundImage: ability.is_innate

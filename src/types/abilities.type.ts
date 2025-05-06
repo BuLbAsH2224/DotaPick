@@ -28,18 +28,22 @@ export interface IAbility {
   target_team: string[];
   target_type: string[];
   videoSRC: string;
+  is_shard?: boolean;
+  is_aghs?: boolean;
 }
 export interface IAghsDesc {
-  hero_name: string;
-  hero_id: number;
-  has_scepter: number;
+  has_scepter: boolean;
   scepter_desc: string;
   scepter_skill_name: string;
-  scepter_new_skill: false;
+  scepter_new_skill: boolean;
+  scepter_videoSRC: string;
+  scepter_imgSRC: string;
   has_shard: boolean;
   shard_desc: string;
   shard_skill_name: string;
   shard_new_skill: boolean;
+  shard_videoSRC: string;
+  shard_imgSRC: string;
 }
 export interface IAbilityFromApi {
   abilities: IAbility[];

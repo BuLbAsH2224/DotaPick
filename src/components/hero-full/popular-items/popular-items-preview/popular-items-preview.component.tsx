@@ -22,19 +22,20 @@ export const PopularItemsPreviewComponent: React.FC<
     const imageEl = e.target as HTMLImageElement;
     const itemPreviewBounds = itemPreviewRef.current.getBoundingClientRect();
     const imgRect = imageEl.getBoundingClientRect();
-   
+
     if (imgRect.left >= itemPreviewBounds.width) {
-   
-      newComponentPos.x = imgRect.left - itemPreviewBounds.width ;
+      newComponentPos.x = imgRect.left - itemPreviewBounds.width;
     } else {
-      newComponentPos.x = imgRect.right ;
+      newComponentPos.x = imgRect.right;
     }
 
-    if (window.innerHeight - imgRect.bottom >= itemPreviewBounds.height) {
-      newComponentPos.y = imgRect.top ;
-    } else {
-      newComponentPos.y = imgRect.bottom - itemPreviewBounds.height;
-    }
+   
+      if (imgRect.bottom - itemPreviewBounds.height < 0) {
+        newComponentPos.y = imgRect.bottom - itemPreviewBounds.height + Math.abs(newComponentPos.y = imgRect.bottom - itemPreviewBounds.height);
+      } else {
+        newComponentPos.y = imgRect.bottom - itemPreviewBounds.height;
+      }
+    
     setDisplayItemInfo(true);
     setPosition(newComponentPos);
   };
@@ -50,7 +51,6 @@ export const PopularItemsPreviewComponent: React.FC<
         className="popularItemPreviewImage"
         src={`https://cdn.akamai.steamstatic.com/${item.img}`}
       />
-
       <ItemPreviewComponent
         ref={itemPreviewRef}
         item={item}

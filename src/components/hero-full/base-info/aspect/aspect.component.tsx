@@ -5,26 +5,47 @@ interface IAspectComponentProps {
   aspect: IAspect;
 }
 
+const getGradient = (color: string): string => {
+  switch (color.toLowerCase()) {
+    case "green":
+      return "linear-gradient(to right, #A2B23E, #2D5A18)";
+    case "red":
+      return "linear-gradient(to right, #9F3C3C, #4A2040)";
+    case "purple":
+      return "linear-gradient(to right, #9C70A4, #282752)";
+    case "blue":
+      return "linear-gradient(to right, #94B5BA, #385B59)";
+    case "yellow":
+      return "linear-gradient(to right, #C3A99A, #4D352B)";
+    case "gray":
+      return "linear-gradient(to right, #565C61, #1B1B21)";
+    default:
+      return "";
+  }
+};
+
 export const AspectComponent: React.FC<IAspectComponentProps> = ({
   aspect,
 }) => {
   return (
     <div className="aspectContainer">
-      <div className="aspectIconAndTitle">
-        <div className="aspectTitleBackground2"></div>
-        <div
-          className="aspectTitleBackground"
-          style={{
-            background: "linear-gradient(to right, #9C70A4, #282752)",
-          }}
-        ></div>
+      <div
+        className="aspectIconAndTitleContainerParent"
+        style={{
+          background: getGradient(aspect.color),
+        }}
+      >
+        <img
+          src="https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/facets/ripple_texture.png"
+          className="aspectGradientImg"
+        />
 
         <div className="aspectIconAndTitleContainer">
           <img src={aspect.img} className="aspectIcon" />
-          <p>{aspect.title}</p>
+          <p className="aspectTitle">{aspect.title}</p>
         </div>
       </div>
-      <p>{aspect.description}</p>
+      <p className="aspectDescText">{aspect.description}</p>
     </div>
   );
 };

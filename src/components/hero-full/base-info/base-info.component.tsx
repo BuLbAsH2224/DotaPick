@@ -17,7 +17,7 @@ export const BaseInfoComponent: React.FC<IBaseInfoProps> = ({ hero }) => {
     queryKey: ["heroAbilities", hero.id],
     queryFn: () => getHeroAbilities(hero.name),
   });
-
+  console.log(hero)
   return (
     <div className="heroFullBaseInfoDiv">
       <div className="BaseInfoDiv">
@@ -38,7 +38,10 @@ export const BaseInfoComponent: React.FC<IBaseInfoProps> = ({ hero }) => {
         <BaseHpManaComponent hero={hero} />
         <BaseAttributesComponent hero={hero} />
       </div>
+      <div>
       <HeroNameVideoComponent hero={hero} />
+      //добавить атрибуты
+      </div>
     </div>
   );
 };

@@ -1,38 +1,47 @@
-div.aspectIconAndTitleContainer {
+.aspectIconAndTitleContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   height: 100%;
   gap: 30px;
+  
 }
-.aspectIconAndTitle{
-   
-    height: 4rem;
-}
-.aspectTitleBackground2 {
-  z-index: -1;
+.aspectGradientImg {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background: url("https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/facets/ripple_texture.png");
-  background-size: cover;
-  filter: invert(44%) sepia(99%) saturate(100%) hue-rotate(295deg)
-    brightness(99%) contrast(100%);
+  z-index: 1;
+  opacity: 0.2;
 }
-.aspectTitleBackground {
-  z-index: -2;
-  width: 100%;
-  height: 100%;
-  position: absolute;
+div.aspectContainer {
+  background-color: #181f24;
+  border: 1px solid #2b2f33;
+  width: calc(100% / 3 - 5px);
 }
-.aspectContainer {
+.aspectIconAndTitleContainerParent {
   position: relative;
+ 
 }
 .aspectIcon {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    
-
+  width: 3rem;
+  object-fit: contain;
+  padding: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.aspectTitle{
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, .8);
+  color: white;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+.aspectDescText{
+  color: #9ab0cd;
+  padding: 1rem;
 }

@@ -45,9 +45,22 @@ export interface IAghsDesc {
   shard_videoSRC: string;
   shard_imgSRC: string;
 }
+export interface IAspect {
+  id: number;
+  name: string;
+  icon: string;
+  color: string;
+  gradient_id: number;
+  title: string;
+  description: string;
+  abilities?: string[];
+  deprecated?: string;
+  img: string;
+}
 export interface IAbilityFromApi {
   abilities: IAbility[];
   aghsAndShard: IAghsDesc;
+  aspects: IAspect[];
 }
 
 export type IAbilities = Record<string, IAbility>;

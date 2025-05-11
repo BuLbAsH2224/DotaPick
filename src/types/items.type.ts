@@ -36,12 +36,7 @@ export interface IItem {
 export interface IItems {
     [itemName: string]: IItem;
   }
-  export interface IHeroPopularItemsID {
-    start_game_items: { [key: string]: number };
-    early_game_items: { [key: string]: number };
-    mid_game_items: { [key: string]: number };
-    late_game_items: { [key: string]: number };
-  }
+
   export interface IHeroPopularItems {
     start_game_items: IItem[];
     early_game_items: IItem[];

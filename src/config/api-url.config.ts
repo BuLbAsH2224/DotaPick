@@ -1,1 +1,1 @@
-export const apiURL = 'https://dotaapi.onrender.com'
+export const apiURL = 'http://localhost:5000'

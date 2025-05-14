@@ -14,7 +14,7 @@ const SingleHeroPage: React.FC = () => {
   }, []);
 
   const { data: heroStatsData } = useQuery<IHeroStats>({
-    queryKey: ["abilitiesInfo", id],
+    queryKey: ["heroInfo", id],
     enabled: Boolean(id),
     queryFn: ({ queryKey }) => {
       const [, heroId] = queryKey as [string, string];

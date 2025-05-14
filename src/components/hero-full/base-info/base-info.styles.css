@@ -1,3 +1,8 @@
+.heroNameAndIndicators{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .heroFullBaseInfoDiv {
   display: flex;
   flex-direction: row;
@@ -11,6 +16,13 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+.aspectsContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 @media (max-width: 1200px) {
   .BaseInfoDiv {

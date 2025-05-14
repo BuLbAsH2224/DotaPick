@@ -2,7 +2,7 @@ export interface IHeroStats {
   id: number;
   name: string;
   localized_name: string;
-  primary_attr: string;
+  primary_attr: 'str' | 'agi' | 'int' | 'all';
   attack_type: string;
   roles: string[];
   img: string;

@@ -1,0 +1,81 @@
+.heroIndicatorsParentContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+.heroIndicatorsContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.heroIndicatorContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+}
+.indicatorsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.heroIndicatorsTheme{
+    font-size: 1.2rem;
+    color: rgb(206, 206, 206);
+    font-weight: 900;
+}
+.heroIndicatorsParentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  color: white;
+}
+.heroIndicatorsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.heroIndicatorContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+.indicatorsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.heroIndicatorsTheme {
+  font-size: 1.2rem;
+  color: rgb(206, 206, 206);
+  font-weight: 900;
+}
+@media (max-width: 600px) {
+  .heroIndicatorsParentContainer {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .heroIndicatorsContainer {
+    gap: 0.8rem;
+    width: 100%;
+  }
+  .heroIndicatorContainer {
+    gap: 0.4rem;
+  }
+  .heroIndicatorContainer img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .heroIndicatorsTheme {
+    font-size: 1rem;
+  }
+  .indicatorsContainer {
+    gap: 0.15rem;
+  }
+}

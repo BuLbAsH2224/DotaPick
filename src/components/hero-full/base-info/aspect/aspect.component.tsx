@@ -14,9 +14,9 @@ const getGradient = (color: string): string => {
     case "purple":
       return "linear-gradient(to right, #9C70A4, #282752)";
     case "blue":
-      return "linear-gradient(to right, #94B5BA, #385B59)";
+      return "linear-gradient(to right, #547EA6, #2A385E)";
     case "yellow":
-      return "linear-gradient(to right, #C3A99A, #4D352B)";
+      return "linear-gradient(to right, #C8A45C, #6F3D21)";
     case "gray":
       return "linear-gradient(to right, #565C61, #1B1B21)";
     default:

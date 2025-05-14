@@ -8,6 +8,7 @@ import { HeroNameVideoComponent } from "./hero-name-video";
 import { getHeroAbilities } from "../../../api";
 import { Loader } from "../../loader";
 import { AspectComponent } from "./aspect";
+import { HeroIndicators } from "./hero-indicators";
 interface IBaseInfoProps {
   hero: IHeroStats;
 }
@@ -17,7 +18,7 @@ export const BaseInfoComponent: React.FC<IBaseInfoProps> = ({ hero }) => {
     queryKey: ["heroAbilities", hero.id],
     queryFn: () => getHeroAbilities(hero.name),
   });
-  console.log(hero)
+
   return (
     <div className="heroFullBaseInfoDiv">
       <div className="BaseInfoDiv">
@@ -38,9 +39,9 @@ export const BaseInfoComponent: React.FC<IBaseInfoProps> = ({ hero }) => {
         <BaseHpManaComponent hero={hero} />
         <BaseAttributesComponent hero={hero} />
       </div>
-      <div>
-      <HeroNameVideoComponent hero={hero} />
-      //добавить атрибуты
+      <div className="heroNameAndIndicators">
+        <HeroNameVideoComponent hero={hero} />
+        <HeroIndicators hero={hero} />
       </div>
     </div>
   );

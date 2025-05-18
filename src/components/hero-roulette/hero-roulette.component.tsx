@@ -45,8 +45,11 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   return (
     <>
       <div
-        className="rouletteHeroPreview"
-        style={{ visibility: !renderPreview ? "hidden" : "visible" }}
+        className={`rouletteHeroPreview ${
+          !renderPreview
+            ? "rouletteHeroPreviewHidden"
+            : "rouletteHeroPreviewVisible"
+        }`}
       >
         <Link to={`/singleHero/${heroes[prizeIndex].id}`}>
           <img src={`${heroes[prizeIndex].img}`} alt="hero img" />

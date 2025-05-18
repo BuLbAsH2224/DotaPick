@@ -61,6 +61,7 @@ export interface IAbilityFromApi {
   abilities: IAbility[];
   aghsAndShard: IAghsDesc;
   aspects: IAspect[];
+  skillTree:  {dname}
 }
 
 export type IAbilities = Record<string, IAbility>;

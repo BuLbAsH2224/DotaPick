@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IAbilityFromApi, IAbility } from "../../../../types";
 import "./abilities.styles.css";
 import { AbilityPreviewComponent } from "./ability-preview";
+import { SkillTree } from "./skill-tree";
 
 interface IAbilitiesProps {
   abilitiesAllInfo: IAbilityFromApi;
@@ -24,6 +25,7 @@ export const AbilitiesComponent: React.FC<IAbilitiesProps> = ({
   return (
     <>
       <div className="heroAbilitiesContainer">
+        <SkillTree skillTree={abilitiesAllInfo.skillTree}/>
         {heroInnateCm ? (
           <AbilityPreviewComponent
             ability={heroInnateCm}

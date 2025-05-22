@@ -18,7 +18,7 @@ export const BaseInfoComponent: React.FC<IBaseInfoProps> = ({ hero }) => {
     queryKey: ["heroAbilities", hero.id],
     queryFn: () => getHeroAbilities(hero.name),
   });
-
+  
   return (
     <div className="heroFullBaseInfoDiv">
       <div className="BaseInfoDiv">

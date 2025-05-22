@@ -57,10 +57,18 @@ export interface IAspect {
   deprecated?: string;
   img: string;
 }
+
+export interface ISkillTree {
+  level1: string[];
+  level2: string[];
+  level3: string[];
+  level4: string[];
+}
 export interface IAbilityFromApi {
   abilities: IAbility[];
   aghsAndShard: IAghsDesc;
   aspects: IAspect[];
+  skillTree: ISkillTree;
 }
 
 export type IAbilities = Record<string, IAbility>;

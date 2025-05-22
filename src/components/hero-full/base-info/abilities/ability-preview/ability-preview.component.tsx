@@ -22,7 +22,7 @@ export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
   };
  
   return (
-    <div>
+    <div className="abilityPreviewContainer">
       <div
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -44,6 +44,7 @@ export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
       <AbilityInfo
         ability={ability}
         styles={{
+          top:"calc(100% + 1rem)",
           position: "absolute",
           visibility: visible ? "visible" : "hidden",
         }}

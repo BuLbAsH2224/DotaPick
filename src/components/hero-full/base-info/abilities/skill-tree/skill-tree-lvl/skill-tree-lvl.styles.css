@@ -42,5 +42,61 @@
   font-weight: 400;
   font-size: 13px;
   color: #ffffffbb;
-  
+}
+@media (max-width: 640px) {
+  .skillTreeLvlContainer {
+    padding: 0 12px;
+    gap: 8px;
+    height: auto;
+  }
+  .skillTreeLvl {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 1rem;
+  }
+  .skillTreeLvlContainerText {
+    width: 50px;
+    padding: 4px;
+  }
+  .skillTreeName {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillTreeLvlContainer {
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .skillTreeLvl {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 0.9rem;
+  }
+  .skillTreeLvlContainerText {
+    width: 45px;
+    padding: 3px;
+  }
+  .skillTreeName {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .skillTreeLvlContainer {
+    padding: 0 6px;
+    gap: 4px;
+  }
+  .skillTreeLvl {
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 0.85rem;
+  }
+  .skillTreeLvlContainerText {
+    width: 40px;
+    padding: 2px;
+  }
+  .skillTreeName {
+    font-size: 0.6rem;
+  }
 }

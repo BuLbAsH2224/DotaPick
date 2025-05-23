@@ -118,7 +118,7 @@
 
 @media (max-width: 30em) {
   .abilityInfoContainer {
-    width: 55%;
+    width: 200px;
   }
   .abilityInfoVideo {
     padding: 0.4rem;

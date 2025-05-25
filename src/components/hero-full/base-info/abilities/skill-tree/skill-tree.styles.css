@@ -28,12 +28,75 @@
   transition: 0.2s;
 }
 .skillTreeIcon:hover {
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
-    transition: 0.2s;
-  }
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+  transition: 0.2s;
+}
 .skillTreeLvlsContainerHide {
   visibility: hidden;
 }
 .skillTreeLvlsContainerVisible {
   visibility: visible;
+}
+@media (max-width: 640px) {
+  .skillTreeLvlsContainer {
+    width: 350px;
+    padding: 16px;
+    gap: 8px;
+  }
+  .skillTreeHeaderText {
+    font-size: 1.1rem;
+  }
+  .skillTreeIcon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillTreeLvlsContainer {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    padding: 14px;
+    gap: 8px;
+  }
+  .skillTreeHeaderText {
+    font-size: 0.9rem;
+  }
+  .skillTreeIcon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .skillTreeLvlsContainer {
+    width: 240px;
+    padding: 12px;
+    gap: 6px;
+    padding-bottom: 24px;
+  }
+  .skillTreeHeaderText {
+    font-size: 0.8rem;
+  }
+  .skillTreeIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .skillTreeLvlsContainer {
+    width: 200px;
+    padding: 10px;
+    gap: 4px;
+    padding-bottom: 20px;
+  }
+  .skillTreeHeaderText {
+    font-size: 0.7rem;
+  }
+  .skillTreeIcon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }

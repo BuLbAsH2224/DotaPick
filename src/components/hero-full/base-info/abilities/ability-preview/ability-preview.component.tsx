@@ -5,22 +5,35 @@ import { AbilityInfo } from "../../../../ability-info";
 
 interface IAbiltiyPreviewProps {
   ability: IAbility;
-  aghsAndShard: IAghsDesc
+  aghsAndShard: IAghsDesc;
 }
 
 export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
-  ability,aghsAndShard
+  ability,
+  aghsAndShard,
 }) => {
   const [visible, setVisible] = useState<boolean>(false);
-  const isShard : string = (aghsAndShard.has_shard && ability.dname === aghsAndShard.shard_skill_name && aghsAndShard.shard_new_skill) || ability.is_shard  ? "heroAbilityShard" : ""
-  const isAghs : string = (aghsAndShard.has_scepter && ability.dname === aghsAndShard.scepter_skill_name && aghsAndShard.scepter_new_skill)  || ability.is_aghs ? "heroAbilityAghs" : ""
+  const isShard: string =
+    (aghsAndShard.has_shard &&
+      ability.dname === aghsAndShard.shard_skill_name &&
+      aghsAndShard.shard_new_skill) ||
+    ability.is_shard
+      ? "heroAbilityShard"
+      : "";
+  const isAghs: string =
+    (aghsAndShard.has_scepter &&
+      ability.dname === aghsAndShard.scepter_skill_name &&
+      aghsAndShard.scepter_new_skill) ||
+    ability.is_aghs
+      ? "heroAbilityAghs"
+      : "";
   const handleMouseEnter: React.MouseEventHandler<HTMLImageElement> = () => {
     setVisible(true);
   };
   const handleMouseLeave: React.MouseEventHandler<HTMLImageElement> = () => {
     setVisible(false);
   };
- 
+
   return (
     <div className="abilityPreviewContainer">
       <div
@@ -44,7 +57,7 @@ export const AbilityPreviewComponent: React.FC<IAbiltiyPreviewProps> = ({
       <AbilityInfo
         ability={ability}
         styles={{
-          top:"calc(100% + 1rem)",
+          top: "calc(100% + 1rem)",
           position: "absolute",
           visibility: visible ? "visible" : "hidden",
         }}

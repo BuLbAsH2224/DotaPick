@@ -28,7 +28,7 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
   const [prizeIndex, setPrizeIndex] = useState<number>(0);
 
   const handleStart = () => {
-    setPrizeIndex(Math.floor(Math.random() * heroes.length));
+    setPrizeIndex(Math.floor(Math.random() * (heroes.length - 20) + 20));
     setStart(true);
   };
 
@@ -57,7 +57,7 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
         <button onClick={handleOnClickClose}>Закрыть</button>
       </div>
       <RoulettePro
-        prizes={[...heroPrizes, ...heroPrizes.slice(heroPrizes.length - 20)]}
+        prizes={[...heroPrizes,...heroPrizes.slice(-20), ...heroPrizes.slice(heroPrizes.length - 20)]}
         prizeIndex={prizeIndex}
         start={start}
         options={{ stopInCenter: true }}

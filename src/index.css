@@ -46,6 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 105vh;
+  overflow-x: hidden;
 }
 
 .mainContent {
@@ -85,4 +86,3 @@ body {
     font-size: 2rem;
   }
 }
-

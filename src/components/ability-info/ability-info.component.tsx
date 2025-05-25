@@ -30,47 +30,54 @@ export const AbilityInfo: React.FC<IAbilityInfoComponent> = ({
         <source src={ability.videoSRC} type="video/mp4" />
       </video>
 
-      <hr className="abilityInfoHR" />
-      <div className="abilityInfoBaseContainer">
-        {ability.behavior ? (
-          <p>
-            TYPE:
-            {Array.isArray(ability.behavior)
-              ? ability.behavior.join("/").toLowerCase()
-              : ability.behavior.toLowerCase()}
-          </p>
-        ) : null}
-        {ability.bkbpierce && !Array.isArray(ability.bkbpierce) ? (
-          <p>
-            PIERCES SPELL IMMUNITY:
-            <span
-              className={ability.bkbpierce === "Yes" ? "bkbpierceYes" : ""}
-            >{` ${ability.bkbpierce.toLowerCase()}`}</span>
-          </p>
-        ) : null}
-        {ability.dmg_type && !Array.isArray(ability.dmg_type) ? (
-          <p>
-            DAMAGE:{" "}
-            <span
-              className={`abilityInfoDamageType_${ability.dmg_type.toLowerCase()}`}
-            >
-              {ability.dmg_type.toLowerCase()}
-            </span>
-          </p>
-        ) : null}
-        {ability.dispellable && !Array.isArray(ability.dispellable) ? (
-          <p>
-            DISPELLABLE:
-            <span
-              className={
-                ability.dispellable === "Strong Dispels Only"
-                  ? "dispellStrong"
-                  : ""
-              }
-            >{` ${ability.dispellable.toLowerCase()}`}</span>
-          </p>
-        ) : null}
-      </div>
+      {ability.behavior ||
+      ability.bkbpierce ||
+      ability.dmg_type ||
+      ability.dispellable ? (
+        <>
+          <hr className="abilityInfoHR" />
+          <div className="abilityInfoBaseContainer">
+            {ability.behavior ? (
+              <p>
+                TYPE:
+                {Array.isArray(ability.behavior)
+                  ? ability.behavior.join("/").toLowerCase()
+                  : ability.behavior.toLowerCase()}
+              </p>
+            ) : null}
+            {ability.bkbpierce && !Array.isArray(ability.bkbpierce) ? (
+              <p>
+                PIERCES SPELL IMMUNITY:
+                <span
+                  className={ability.bkbpierce === "Yes" ? "bkbpierceYes" : ""}
+                >{` ${ability.bkbpierce.toLowerCase()}`}</span>
+              </p>
+            ) : null}
+            {ability.dmg_type && !Array.isArray(ability.dmg_type) ? (
+              <p>
+                DAMAGE:{" "}
+                <span
+                  className={`abilityInfoDamageType_${ability.dmg_type.toLowerCase()}`}
+                >
+                  {ability.dmg_type.toLowerCase()}
+                </span>
+              </p>
+            ) : null}
+            {ability.dispellable && !Array.isArray(ability.dispellable) ? (
+              <p>
+                DISPELLABLE:
+                <span
+                  className={
+                    ability.dispellable === "Strong Dispels Only"
+                      ? "dispellStrong"
+                      : ""
+                  }
+                >{` ${ability.dispellable.toLowerCase()}`}</span>
+              </p>
+            ) : null}
+          </div>
+        </>
+      ) : null}
       <hr className="abilityInfoHR" />
       <p className="abilityInfoDesc">{ability.desc}</p>
       {ability.attrib.some((item: IAbilityAttrib) => {

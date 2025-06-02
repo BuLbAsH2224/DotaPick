@@ -14,7 +14,7 @@ const HeroRoulettePage: React.FC = () => {
       <div className="rouletteHeaderContainer">
         <h1 className="rouletteHeader">Рулетка героев</h1>
         <p className="rouletteHeaderText">
-          Рулетка героев - поможет выбрать вам персонажа
+          Один клик — один случайный герой. Попробуй удачу!
         </p>
       </div>
       {heroesPreviewData ? (

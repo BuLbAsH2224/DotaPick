@@ -62,7 +62,6 @@ export const HeroRouletteComponent: React.FC<IHeroRouletteProps> = ({
         start={start}
         options={{ stopInCenter: true }}
         defaultDesignOptions={{ prizesWithText: true }}
-        soundWhileSpinning="roulette-spin.mp3"
         spinningTime={2}
         onPrizeDefined={handlePrizeDefined}
       />

@@ -13,7 +13,7 @@ A  **Dota 2** hero picker built with **React 18 + Vite** on the front‑end and 
 </p>
 
 <p align="center">
-  <a href="https://bulbash2224.github.io/DotaProject/">🌐 Live Demo (GitHub Pages)</a><br/>
+  <a href="https://bulbash2224.github.io/DotaPick/">🌐 Live Demo (GitHub Pages)</a><br/>
   <sub>⚠️ The first request can take up to a minute — the free API needs to wake up.</sub>
 </p>
 

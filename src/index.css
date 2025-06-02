@@ -30,6 +30,10 @@ html {
   height: auto;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background: url("/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
@@ -43,10 +47,6 @@ body {
   flex-direction: column;
   min-height: 105vh;
   overflow-x: hidden;
-  background: url("/background.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .mainContent {
